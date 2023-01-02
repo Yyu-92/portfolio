@@ -9,15 +9,22 @@
 	<title>YUJIN-PORTFOLIO</title>
 	
 	<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+	<link rel="stylesheet" href="css/plugins/jquery.fullpage.css" type="text/css" />
 	<link rel="stylesheet" href="css/plugins/aos.css" type="text/css" />
+	
+	<link rel="stylesheet" href="css/plugins/slick.css" type="text/css" />
+	<link rel="stylesheet" href="css/plugins/slick-theme.css" type="text/css" />
 	
 	<link rel="stylesheet" href="css/thema/basic.css" type="text/css" />
 	<link rel="stylesheet" href="css/thema/main.css" type="text/css" />
 	
 	<script src="js/plugins/jquery-3.3.1.min.js"></script>
-	<script src="js/plugins/masonry-docs.min.js"></script>
+	<script src="js/plugins/jquery.fullpage.min.js"></script>
+
+	<script src="js/plugins/slick.min.js"></script>
+	<!--<script src="js/plugins/masonry-docs.min.js"></script>-->
 	<script src="js/plugins/aos.js"></script>
-	<script src="js/thema/portfolio.js"></script>
+	
 	
 </head>
 <body>
@@ -26,102 +33,244 @@
 		<div class="logo">
 			<a href="#"><h1>YUJIN</h1></a>
 		</div>
-		<nav>
+		<!--<nav>
 			<ul>
 				<li>자기소개</li>
 				<li>포트폴리오</li>
 				<li>메뉴2</li>
 				<li>메뉴3</li>
 			</ul>
-		</nav>
+		</nav>-->
 	</header>
 	<!-- main -->
-	<main>
+	<main id="fullpage">
 		<section id="section1" class="section">
 			<div class="intro">
 				<div class="sectWrap">
-					<h1>안녕하세요.<span class="block"></span> 3년차 웹퍼블리셔 김유진입니다.</h1>
-					<div class="text_line_bar"></div>
-					<p>저는 퍼블리싱을 즐기고 사랑하는 웹퍼블리셔입니다 :)<span class="block"></span>
-						CSS와 JQUERY를 활용한 동적인 느낌을 좋아합니다.<span class="block"></span>
-						디자인을 그대로 구현했을 때 느끼는 쾌감은 저를 더욱더 이 일에 몰두하도록 만들어요!<span class="block"></span>
-						<br />
-						현실에 안주하지 않고 더 나은 방향으로 가기 위해 공부를 게을리하지 않는데요,<span class="block"></span>
-						가독성 좋은 코드를 짜고 유지보수에 적합한 마크업을 하기 위해 끊임없이 고민합니다.<span class="block"></span>
-						<br />
-						새로운 시도에 주저하지 않으며 더욱더 발전된 모습을 보여드리겠습니다. 
-					</p>
-				</div>
-			</div>
-			<div class="intro_bg">
-				PORTFOLIO
+					<div class="intro-left">
+						<h1 data-aos="fade-left" data-aos-delay="100">안녕하세요 :)</h1>
+						<h1 class="lastH1" data-aos="fade-left" data-aos-delay="200">웹퍼블리셔 김유진입니다.</h1>
+						<p data-aos="fade-up" data-aos-delay="400">저는 퍼블리싱을 즐기고 사랑하는 웹퍼블리셔입니다 :)<span class="block"></span>
+							CSS와 JQUERY를 활용한 동적인 느낌을 좋아합니다.<span class="block"></span>
+							디자인을 그대로 구현했을 때 느끼는 쾌감은 저를 더욱더 이 일에 몰두하도록 만들어요!<span class="block"></span>
+							<br />
+							현실에 안주하지 않고 더 나은 방향으로 가기 위해 공부를 게을리하지 않는데요,<span class="block"></span>
+							가독성 좋은 코드를 짜고 유지보수에 적합한 마크업을 하기 위해 끊임없이 고민합니다.<span class="block"></span>
+							새로운 시도에 주저하지 않으며 더욱더 발전된 모습을 보여드리겠습니다. 
+						</p>
+					</div>
+					<div class="intro-bottom">
+						<ul class="available" data-aos="fade-up" data-aos-delay="500">
+							<li>
+								<figure>
+									<img src="images/html5.png" alt="html5" />
+									<figcaption>HTML5</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="images/css.png" alt="css" />
+									<figcaption>CSS</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="images/jquery.png" alt="jquery" />
+									<figcaption>JQUERY</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="images/js.png" alt="javascript" />
+									<figcaption>JAVA<span class="block"></span>SCRIPT</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="images/git.png" alt="git" />
+									<figcaption>GIT</figcaption>
+								</figure>
+							</li>
+						</ul>
+					</div>
+				</div>	
 			</div>
 		</section><!-- section -->
+		
 		<section id="section2" class="section">
-			<div class="portfolio">
-				<div class="line_box">
-					<div class="line line1"></div>
-					<div class="line line2"></div>
-					<div class="line line3"></div>
-					<div class="line line4"></div>
+			<div id="portfolio1" class="portfolio">
+				<div class="pf-title">
+					<div class="title-bar"></div>
+					<h2>PORTFOLIO 01</h2>
+					<h1>(주)에니트<span class="block"></span> 홈페이지</h1>
+					<ul class="role">
+						<li>
+							<p>반응형으로 제작하여 모든 기기에서 적용 가능하도록 만들었습니다. 메인페이지는 풀페이지로 디자인하여
+								각 페이지마다 회사에 대한 정보가 부각될 수 있도록 하였습니다.
+							</p>
+						</li>
+						<li><span class="role-name">PUBLISHING</span> <span class="percentage"></span></li>
+						<li><span class="role-name">DESIGN</span> <span class="percentage"></span></li>
+					</ul>
+					<div class="fixed-url">
+						<div class="url-inner">
+							<p>(주)에니트 홈페이지의 메인페이지 입니다 :)</p>
+							<a class="more-btn" href="project/enitt-html/index.html" target="_blank">에니트 홈페이지 더보기 ▶</a>
+							<a class="close-btn"><i class="xi-close-min"></i></a>
+						</div>
+					</div>
 				</div>
-				<div class="sectWrap">
-					<h1>저는 이런 프로젝트를 해왔습니다.</h1>
-					<div class="portfolio_list">
-						<figure>
-							<img src="" alt="" />
-							<figcaption>a</figcaption>
+				<div class="pf-right">
+					<div id="project-slick">
+						<figure class="slick-items">
+							<img src="images/enitt.jpg" alt="에니트홈페이지메인" />
 						</figure>
-						<figure>
-							<img src="" alt="" />
-							<figcaption>a</figcaption>
+						<figure class="slick-items">
+							<img src="images/enitt2.jpg" alt="에니트홈페이지메인" />
 						</figure>
-						<figure>
-							<img src="" alt="" />
-							<figcaption>a</figcaption>
+						<figure class="slick-items">
+							<img src="images/enitt3.jpg" alt="에니트홈페이지메인" />
 						</figure>
-						<figure>
-							<img src="" alt="" />
-							<figcaption>a</figcaption>
+						<figure class="slick-items">
+							<img src="images/enitt4.jpg" alt="에니트홈페이지메인" />
+						</figure>
+						<figure class="slick-items">
+							<img src="images/enitt5.jpg" alt="에니트홈페이지메인" />
 						</figure>
 					</div>
 				</div>
-			</div><!-- portfolio -->
+			</div><!-- project -->
 		</section><!-- section -->
+
 		<section id="section3" class="section">
+			<div id="portfolio2" class="portfolio right">
+				<div class="pf-title">
+					<div class="title-bar"></div>
+					<h2>PORTFOLIO 02</h2>
+					<h1>(주)솝쿡<span class="block"></span> 홈페이지</h1>
+					<ul class="role">
+						<li>
+							<p>반응형으로 제작하여 모든 기기에서 적용 가능하도록 만들었습니다. 메인페이지는 다양한 제품 사진을 활용하여 제품이
+								돋보일 수 있도록 디자인 및 퍼블리싱하였습니다.
+							</p>
+						</li>
+						<li><span class="role-name">PUBLISHING</span> <span class="percentage"></span></li>
+						<li><span class="role-name">DESIGN</span> <span class="percentage"></span></li>
+					</ul>
+					<div class="fixed-url">
+						<div class="url-inner">
+							<p>(주)솝쿡 홈페이지의 메인페이지 입니다 :)</p>
+							<a class="more-btn" href="project/soapcook-html/index.html" target="_blank">◀ 솝쿡 홈페이지 더보기</a>
+							<a class="close-btn"><i class="xi-close-min"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pf-right">
+					<div id="project-slick2">
+						<figure class="slick-items">
+							<img src="images/soapcook.jpg" alt="솝쿡홈페이지메인" />
+						</figure>
+						<figure class="slick-items">
+							<img src="images/soapcook2.jpg" alt="솝쿡홈페이지메인" />
+						</figure>
+						<figure class="slick-items">
+							<img src="images/soapcook3.jpg" alt="솝쿡홈페이지메인" />
+						</figure>
+						<figure class="slick-items">
+							<img src="images/soapcook4.jpg" alt="솝쿡홈페이지메인" />
+						</figure>
+						<figure class="slick-items">
+							<img src="images/soapcook5.jpg" alt="솝쿡홈페이지메인" />
+						</figure>
+					</div>
+				</div>
+			</div><!-- project -->
+		</section><!-- section -->
+
+		<section id="section4" class="section">
+			<div id="portfolio3" class="portfolio">
+				<div class="pf-title">
+					<div class="title-bar"></div>
+					<h2>PORTFOLIO 03</h2>
+					<h1>(주)넥스트파워<span class="block"></span> 홈페이지</h1>
+					<ul class="role">
+						<li>
+							<p>반응형으로 제작하여 모든 기기에서 적용 가능하도록 만들었습니다. 메인페이지는 풀페이지로 디자인하여
+								각 페이지마다 회사에 대한 정보가 부각될 수 있도록 하였습니다.
+							</p>
+						</li>
+						<li><span class="role-name">PUBLISHING</span> <span class="percentage"></span></li>
+						<li><span class="role-name">DESIGN</span> <span class="percentage"></span></li>
+					</ul>
+					<div class="fixed-url">
+						<div class="url-inner">
+							<p>(주)넥스트파워 홈페이지의 서브페이지 입니다 :)</p>
+							<a class="more-btn" href="project/nextpower-html/index.html" target="_blank">넥스트파워 홈페이지 더보기 ▶</a>
+							<a class="close-btn"><i class="xi-close-min"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pf-right">
+					<div id="project-slick3">
+						<figure class="slick-items">
+							<img src="images/nextpower.jpg" alt="넥스트파워홈페이지메인" />
+						</figure>
+						<figure class="slick-items">
+							<img src="images/nextpower2.jpg" alt="넥스트파워홈페이지메인" />
+						</figure>
+						<figure class="slick-items">
+							<img src="images/nextpower3.jpg" alt="넥스트파워홈페이지메인" />
+						</figure>
+						<figure class="slick-items">
+							<img src="images/nextpower4.jpg" alt="넥스트파워홈페이지메인" />
+						</figure>
+					</div>
+				</div>
+			</div><!-- project -->
+		</section><!-- section -->
+
+		<section id="section5" class="section fp-auto-height">
 			<div class="skill">
 				<div class="sectWrap row">
-					<div class="col-4">
-						<h1>제가 가진 능력은요 <i class="xi-hand-pointing"></i></h1>
-					</div>
-					<div class="col-8">
-						<ul class="skill_list">
-							<li data-aos="fade-right" data-aos-delay="200">
-								<h3><i class="xi-branch"></i> 견고한 마크업</h3>
-								<p>의미론적 마크업 등을 통해 웹표준성과 웹접근성을 보장하여, 다양한 사용자들이 다양한 기기를 통해 접근할 수 있도록 합니다.</p>
-							</li>
-							<li data-aos="fade-right" data-aos-delay="300">
-								<h3><i class="xi-branch"></i> UI 개발 능력</h3>
+					<h1>제가 가진 능력은요</h1>
+					<ul class="skill_list">
+						<li>
+							<div>
+								<h3>견고한 마크업</h3>
+								<p>시멘틱 마크업 등을 통해 웹표준성과 웹접근성을 보장하여, 다양한 사용자들이 다양한 기기를 통해 접근할 수 있도록 합니다.</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<h3>UI 개발 능력</h3>
 								<p>HTML, CSS, JQUERY 라이브러리 등을 이용한 UI 개발 능력이 탁월하며, 더욱 다양하고 동적인 표현을 위해 JAVASCRIPT를 꾸준히 공부하고 있습니다.</p>
-							</li>
-							<li data-aos="fade-right" data-aos-delay="400">
-								<h3><i class="xi-branch"></i> 반응형 최적화</h3>
+							</div>
+						</li>
+						<li>
+							<div>
+								<h3>반응형 최적화</h3>
 								<p>모든 홈페이지 프로젝트를 반응형으로 진행해 왔기 때문에, 반응형에 최적화 된 작업 능력을 가지고 있습니다.</p>
-							</li>
-							<li data-aos="fade-right" data-aos-delay="500">
-								<h3><i class="xi-branch"></i> 협동 능력</h3>
+							</div>
+						</li>
+						<li>
+							<div>
+								<h3>협동 능력</h3>
 								<p>웹디자인 업무를 한 경험으로 디자이너와의 협업이 원할하며, 개발자와도 끊임없는 소통을 통해 최고의 결과물을 얻어냅니다.</p>
-							</li>
-							
-							<li data-aos="fade-right" data-aos-delay="600">
-								<h3><i class="xi-branch"></i> 발전을 위한 노력</h3>
+							</div>
+						</li>
+						<!-- <li data-aos="fade-right" data-aos-delay="600"> -->
+						<li>
+							<div>
+								<h3>발전을 위한 노력</h3>
 								<p>협업에 대비해 git 등을 스스로 공부하였고, 컴포넌트 단위의 개발을 위한 React에도 관심이 있어 꾸준히 공부를 해 나갈것입니다. </p>
-							</li>
-					</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div><!-- skill -->
 		</section><!-- section -->
-		<section id="section4" class="section">
+	
+		<section id="section6" class="section fp-auto-height">
 			<div class="special">
 				<div class="sectWrap">
 					<h1>더 보여주고 싶은게 있습니다!</h1>
@@ -129,51 +278,173 @@
 			</div>
 		
 		</section><!-- section -->
+	
 	</main>
-	<!--footer -->
-	<footer>
-	</footer>
+
+	
 </body>
 
 <script type="text/javascript">
-	$(function(){
-		AOS.init();
+	//fullpage
+	$(function(){	
+		$('#fullpage').fullpage({
+			anchors: ['1', '2', '3', '4'],
+			navigation: true,
+			navigationPosition: 'left',
+			navigationTooltips: ['자기소개', '포트폴리오', '메뉴', '메뉴'],
+			responsiveWidth: 767,
+			afterRender: function(){
+				new AOS.init();
+				$('#project-slick').slick({
+					infinite: true,
+					arrows: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					autoplay: true,
+					speed: 40000,
+					autoplaySpeed: 0,
+					vertical: true,
+					responsive: [
+						{
+							breakpoint: 1105,
+							settings: {
+								slidesToShow: 1	
+							}
+						},
+						{
+							breakpoint: 767,
+							settings: {
+								slidesToShow: 2
+							}
+						},
+						{
+							breakpoint: 578,
+							settings: {
+								slidesToShow: 1,
+								centerMode: true
+							}
+						}
+						
+					]
+				});
+
+				$('#project-slick2').slick({
+					infinite: true,
+					arrows: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					autoplay: true,
+					speed: 40000,
+					autoplaySpeed: 0,
+					vertical: true,
+					responsive: [
+						{
+							breakpoint: 1105,
+							settings: {
+								slidesToShow: 1	
+							}
+						},
+						{
+							breakpoint: 767,
+							settings: {
+								slidesToShow: 2
+							}
+						},
+						{
+							breakpoint: 578,
+							settings: {
+								slidesToShow: 1,
+								centerMode: true
+							}
+						}
+						
+					]
+				});
+
+				$('#project-slick3').slick({
+					infinite: true,
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					autoplay: true,
+					speed: 3000,
+ 					variableWidth: true,
+					responsive: [
+						{
+							breakpoint: 1105,
+							settings: {
+								slidesToShow: 1	
+							}
+						},
+						{
+							breakpoint: 767,
+							settings: {
+								slidesToShow: 2
+							}
+						},
+						{
+							breakpoint: 578,
+							settings: {
+								slidesToShow: 1,
+								centerMode: true
+							}
+						}
+						
+					]
+				});
+
+				
+			},
+			onLeave : function(index, nextIndex, direction){	
+				new AOS.init();
+
+				// FOOTER
+				if( nextIndex == 5 || nextIndex == 6){
+					$('#header, #fp-nav').fadeOut();
+				}else {
+					$('#header, #fp-nav').fadeIn();
+				}
+				
+			}
+		});
 	});
 	
 	
 	//menu scroll
-	const lis = document.querySelectorAll("nav ul li")
-	const sections = document.querySelectorAll(".section")
-	const firstTop = sections[0].offsetTop
-	const secondTop = sections[1].offsetTop
-	const thirdTop = sections[2].offsetTop
-	const forthTop = sections[3].offsetTop
+	// const lis = document.querySelectorAll("nav ul li")
+	// const sections = document.querySelectorAll(".section")
+	// const firstTop = sections[0].offsetTop
+	// const secondTop = sections[1].offsetTop
+	// const thirdTop = sections[2].offsetTop
+	// const forthTop = sections[3].offsetTop
 	
-	lis[0].onclick = () => {
-	    window.scroll({top:firstTop, behavior: 'smooth'})
-	}
-	lis[1].onclick = () => {
-	    window.scroll({top:secondTop, behavior: 'smooth'})
-	}
-	lis[2].onclick = () => {
-	    window.scroll({top:thirdTop, behavior: 'smooth'})
-	}
-	lis[3].onclick = () => {
-	    window.scroll({top:forthTop, behavior: 'smooth'})
-	}
+	// lis[0].onclick = () => {
+	//     window.scroll({top:firstTop, behavior: 'smooth'})
+	// }
+	// lis[1].onclick = () => {
+	//     window.scroll({top:secondTop, behavior: 'smooth'})
+	// }
+	// lis[2].onclick = () => {
+	//     window.scroll({top:thirdTop, behavior: 'smooth'})
+	// }
+	// lis[3].onclick = () => {
+	//     window.scroll({top:forthTop, behavior: 'smooth'})
+	// }
 	
 	
-	//tab
-	  $('nav ul li').click(function(){
-			var tab_id = $(this).attr('data-tab');
+	// //tab
+	//   $('nav ul li').click(function(){
+	// 		var tab_id = $(this).attr('data-tab');
 
-			$('.about-tab li').removeClass('tab-selected');
-			$('.about-content').removeClass('tab-selected');
+	// 		$('.about-tab li').removeClass('tab-selected');
+	// 		$('.about-content').removeClass('tab-selected');
 
-			$(this).addClass('tab-selected');
-			$("#"+tab_id).addClass('tab-selected');
-		})
+	// 		$(this).addClass('tab-selected');
+	// 		$("#"+tab_id).addClass('tab-selected');
+	// 	})
+
+	
 	
 </script>
+<script src="js/thema/portfolio.js"></script>
 
 </html>
