@@ -28,7 +28,7 @@ nav.act ul li:last-child{transition:0s;}
 
 /**** fullpage ****/
 .section{width:100%;height:100%;}
-.fp-section, .fp-tableCell{overflow:hidden;}
+.fp-section{overflow:hidden;display:flex;}
 
 /* fp-nav*/
 #fp-nav{top:auto;bottom:42px;}
@@ -41,8 +41,9 @@ nav.act ul li:last-child{transition:0s;}
 /**** main ****/
 
 /* intro */
+#section1.fp-section{display:inherit;}
 .intro{display:flex;height:100%;align-items:center;position:relative;}
-.intro::before{position:absolute;content:'';background:url(../../images/ujin.png)no-repeat center center;width:400px;height:100%;right:69px;top:50%;transform:translateY(-50%);background-size:100% auto;opacity:0.3;animation:fadeLeft 1.5s;}
+.intro::before{position:absolute;content:'';background:url(../../images/ujin.png)no-repeat center center;width:400px;height:100%;right:4%;top:50%;transform:translateY(-50%);background-size:100% auto;opacity:0.3;animation:fadeLeft 1.5s;}
 
 .intro h1{font-size:99px;line-height:0.93;font-weight:normal;color:#222;position:relative;display:inline-block;}
 .lastH1{margin-bottom:33px;}
@@ -58,7 +59,7 @@ nav.act ul li:last-child{transition:0s;}
 .available li:nth-of-type(3) figure{transform:rotate(-6deg);}
 .available li:nth-of-type(4) figure{transform:rotate(6deg);}
 .available li figure img{width:85px;}
-.available li figure figcaption{font-size:39px;font-weight:bold;font-family:'Do Hyeon', sans-serif;opacity:0.2;margin-top:33px;line-height:38px;}
+.available li figure figcaption{font-size:39px;font-weight:bold;font-family:'Do Hyeon', sans-serif;opacity:0.2;margin-top:33px;line-height:0.98;}
 
 @keyframes fadeLeft{
 	0%{right:0;}
@@ -76,12 +77,12 @@ nav.act ul li:last-child{transition:0s;}
 .title-bar{width:180px;height:1px;background:#222;margin-bottom:90px;}
 .pf-title .title-bar{background:#0070c0;}
 .pf-title h2{font-size:30px;margin-bottom:35px;}
-.pf-title h1{font-size:50px;line-height:58px;}
+.pf-title h1{font-size:50px;line-height:1.16;}
 
 .role{position:absolute;bottom:11%;width:100%;padding-right:40px;box-sizing:border-box;}
 .role li{padding:7px 0;display:flex;align-items:center;justify-content:space-between;}
 .role li p{font-size:14px;text-align:justify;margin-bottom:50px;font-weight:500;letter-spacing:-0.02em;line-height:1.55;}
-.role-name{font-size:15px;font-weight:400;flex-basis:33%;font-family:'Do Hyeon', sans-serif;color:#0070c0;}
+.role-name{font-size:15px;font-weight:400;font-family:'Do Hyeon', sans-serif;color:#0070c0;}
 .percentage{display:inline-block;width:calc(100% - 40%);height:5px;border-radius:3px;background:#0070c0b7;position:relative;}
 .percentage::after{position:absolute;content:'100%';font-size:10px;top:-15px;right:0px;font-weight:bold;font-style:italic;}
 
@@ -121,7 +122,7 @@ nav.act ul li:last-child{transition:0s;}
 #portfolio3 .pf-right .slick-list{overflow:hidden;}
 #portfolio3 .slick-items{padding-right:50px;}
 #portfolio3 .slick-items img{width:auto;height:87vh;border:1px dotted #00b4af;}
-#portfolio3 .slick-prev, #portfolio3 .slick-next{top:auto;border:1px solid #00b4af;width:37px;height:37px;box-sizing:border-box;bottom:-66px;}
+#portfolio3 .slick-prev, #portfolio3 .slick-next{background:#fff;z-index:999;top:auto;border:1px solid #00b4af;width:37px;height:37px;box-sizing:border-box;bottom:-66px;}
 #portfolio3 .slick-prev{left:0px;}
 #portfolio3 .slick-next{right:auto;left:42px;}
 #portfolio3 .slick-prev::before, #portfolio3 .slick-next::before{content:'\e93b';font-family:'xeicon';color:#00b4af;font-size:16px;}
@@ -136,7 +137,7 @@ nav.act ul li:last-child{transition:0s;}
 .skill-left{width:36%;padding-right:70px;box-sizing:border-box;}
 .skill-top{margin-bottom:60px;}
 .title-bar2{width:363px;margin-bottom:40px;}
-.skill-top h3{font-size:36px;font-weight:lighter;line-height:43px;}
+.skill-top h3{font-size:36px;font-weight:lighter;line-height:1.2;}
 .lastH3{margin-bottom:22px;}
 .skill-top p{font-size:18px;line-height:1.4;font-weight:400;}
 
@@ -153,28 +154,167 @@ nav.act ul li:last-child{transition:0s;}
 .skill_list li p{padding:0 35px;line-height:1.6;font-family:'Do Hyeon', sans-serif;font-weight:lighter;text-align:justify;letter-spacing:-0.06em;font-size:23px;}
 
 @media all and (max-width:1300px){
+	header .logo h1{font-size:32px;}
+
+	/*intro*/
+	.intro::before{width:310px;}
 	.intro h1{font-size:83px;}
 	.lastH1{margin-bottom:26px;}
 	.lastH1::before{font-size:27px;top:-25px;}
 	.intro p{font-size:16px;}
 	.blank{margin-bottom:17px;}
+
+	.intro-bottom{padding-top:34px;}
+	.available li figure img{width:72px;}
+	.available li figure figcaption{font-size:32px;margin-top:11px;}
+
+	/*portfolio*/
+	.portfolio{padding:0 0 0 10%;}
+	.pf-title{width:27%;}
+	.pf-right{width:73%;}
+	.title-bar{width:158px;margin-bottom:70px;}
+	.pf-title h2{font-size:27px;margin-bottom:27px;}
+	.pf-title h1{font-size:44px;}
+	.role{padding-right:30px;}
+	.role li p{margin-bottom:40px;}
+	.role-name{font-size:14px;}
+	.percentage{width:calc(100% - 38%);}
+
+	.url-inner{padding:10px 38px 10px 15px;}
+	.more-btn{font-size:14px;}
+	.close-btn{top:5px;font-size:10px;line-height:14px;padding:0 2px;}
+
+	.portfolio.right{padding:0 10% 0 0;}
+	.portfolio.right .role{padding-left:30px;}
+	.portfolio.right .url-inner{padding:10px 15px 10px 38px;}
 	
+	/*skill*/
+	.skill{padding:0 5%;}
+	.skill-top h3{font-size:33px;}
+	.lastH3{margin-bottom:16px;}
+	.skill-left{padding-right:45px;}
+	.skill-top{margin-bottom:50px;}
+	.skill-top p{font-size:16px;}
+
+	.skill_list li div{padding:27px 0 37px;}
+	.skill_list li div h3{font-size:30px;margin-bottom:16px;}
+	.skill_list li p{font-size:21px;}
 	
 }
 
+@media all and (max-width:1000px){
+	/*skill*/
+	.skill-top h3{display:inline;}
+	.skill-top p{margin-top:16px;}
+
+	.skill_list li div h3{font-size:28px;}
+	.skill_list li p{font-size:19px;padding:0 27px;}
+	
+
+}
+
 @media all and (max-width:767px){
+	.fp-section{height:auto !important;}
+	
+	header{height:60px;}
+	header.active{background:#fff;border-bottom:1px solid #eee;box-shadow:5px 5px 10px rgb(0 0 0 / 5%);}
+
+	/*intro*/
+	.intro{height:auto;padding:120px 0 65px;}
+	.intro::before{width:240px;}
 	.intro h1{font-size:60px;}
 	.lastH1{margin-bottom:22px;}
 	.lastH1::before{font-size:23px;top:-21px;right:-16px;}
 	.intro p{font-size:15px;}
 	.blank{margin-bottom:14px;}
+
+	.intro-bottom{padding-top:28px;}
+	.available li figure img{width:56px;}
+	.available li figure figcaption{font-size:23px;margin-top:9px;}
+
+	/*portfolio*/
+	.portfolio{padding:65px 0;display:block;height:auto;}
+	.pf-title{width:100%;padding:0 2% 120px 2%;box-sizing:border-box;}
+	.title-bar{width:149px;margin-bottom:50px;}
+	.pf-title h1{margin-bottom:10px;font-size:40px;}
+	.pf-title h2{font-size:25px;margin-bottom:21px;}
+	.pf-title span.block{display:inline-block;}
+	.role{position:inherit;padding-right:0;}
+	.role li p{font-size:16px;}
+	.fixed-url{top:auto;bottom:-16px;right:2%;transform:none;text-align:left;}
+	.fixed-url::after{content:'▼';right:auto;left:-5px;top:auto;transform:rotate(40deg);font-size:16px;bottom:-10px;}
+	
+	.pf-right{width:100%;height:580px;overflow:hidden;box-shadow:0 -1px 21px rgb(0 0 0 / 21%);}
+	#project-slick, #project-slick2{overflow:hidden;}
+	.percentage{width:calc(100% - 21%);}
+
+	.portfolio.right{padding:65px 0;}
+	.portfolio.right .pf-title{text-align:left;}
+	.portfolio.right .pf-title .title-bar{float:none;}
+	.portfolio.right .role{padding-left:0;}
+
+	.portfolio.right .fixed-url{left:2%;}
+	.portfolio.right .fixed-url::after{right:-5px;transform:rotate(-40deg);left:auto;}
+	.portfolio.right .url-inner{padding:10px 38px 10px 15px;}
+	.portfolio.right .close-btn{left:auto;right:9px;}
+
+	#portfolio3 .pf-right{box-shadow:none;overflow:visible;}
+	#project-slick3{height:100%;}
+	#portfolio3 .pf-right .slick-list{height:100%;}
+	#portfolio3 .pf-right .slick-track{height:100%;}
+	#portfolio3 .slick-items{margin:0 10px;padding-right:0;height:100%;}
+	#portfolio3 .slick-items img{width:auto;height:100%;}
+	#portfolio3 .slick-prev{left:10px;bottom:auto;top:-50px;}
+	#portfolio3 .slick-next{left:52px;bottom:auto;top:-50px;}
+
+	/*skill*/
+	.skill{padding:65px 2%;display:block;}
+	.skill-left{width:100%;padding:0 0 65px 0;}
+	.skill-top h3{display:block;}
+	.skill-top p{margin-top:0;}
+
+	.skill-right{width:100%;}
+	.skill_list li div{padding:22px 0 32px;}
+	.skill_list li div h3{font-size:26px;}
 }
 
 @media all and (max-width:525px){
+	header{height:55px;}
+	header .logo h1{font-size:30px;}
+
+	/*intro*/
+	.intro{padding:120px 0 55px;}
+	.intro::before{width:194px;}
 	.intro h1{font-size:45px;}
 	.lastH1::before{font-size:20px;top:-18px;right:-18px;}
 	.intro p{font-size:14px;}
 	.blank{margin-bottom:12px;}
+
+	.intro-bottom{padding-top:23px;}
+	.available li figure img{width:44px;}
+	.available li figure figcaption{font-size:19px;margin-top:7px;}
+
+	/*portfolio*/
+	.portfolio{padding:55px 0;}
+	.title-bar{width:133px;margin-bottom:45px;}
+	.pf-title{padding:0 2% 90px 2%;}
+	.pf-title h2{font-size:23px;margin-bottom:19px;}
+	.pf-title h1{font-size:36px;}
+	.role li p{font-size:15px;margin-bottom:35px;}
+	.percentage{height:4px;}
+	
+	.portfolio.right{padding:55px 0;}
+	.pf-right{height:480px;}
+
+	/*skill*/
+	.skill{padding:55px 0;}
+	.skill-top h3{font-size:30px;}
+	.lastH3{margin-bottom:14px;}
+	.skill-top p{font-size:15px;}
+
+	.skill_list li div{padding:22px 0 27px;}
+	.skill_list li div h3{font-size:23px;}
+	.skill_list li p{font-size:17px;line-height:1.4;padding:0 19px;}
 }
 
 
