@@ -1,3 +1,14 @@
+$(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 90){
+			$('header').addClass('active');
+		} else{
+			$('header').removeClass('active');
+		}
+	});
+});
+
+
 
 // 더보기 창 끄기
 let closeList = [].slice.call(document.getElementsByClassName('close-btn'));
