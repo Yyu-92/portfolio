@@ -9,7 +9,8 @@
 	<title>YUJIN-PORTFOLIO</title>
 	
 	<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
-	<link rel="stylesheet" href="css/plugins/jquery.fullpage.css" type="text/css" />
+	<!-- <link rel="stylesheet" href="css/plugins/jquery.fullpage.css" type="text/css" /> -->
+	<link rel="stylesheet" href="css/plugins/fullpage.css" type="text/css" />
 	<link rel="stylesheet" href="css/plugins/animate.css" type="text/css" />
 	
 	<link rel="stylesheet" href="css/plugins/slick.css" type="text/css" />
@@ -19,7 +20,8 @@
 	<link rel="stylesheet" href="css/thema/main.css" type="text/css" />
 	
 	<script src="js/plugins/jquery-3.3.1.min.js"></script>
-	<script src="js/plugins/jquery.fullpage.min.js"></script>
+	<!-- <script src="js/plugins/jquery.fullpage.min.js"></script> -->
+	<script src="js/plugins/fullpage.js"></script>
 
 	<script src="js/plugins/slick.min.js"></script>
 	<script src="js/plugins/wow.min.js"></script>
@@ -214,18 +216,18 @@
 				</div>
 				<div class="pf-right">
 					<div id="project-slick3">
-						<figure class="slick-items">
+						<div class="slick-items">
 							<img src="images/nextpower.jpg" alt="넥스트파워홈페이지메인" />
-						</figure>
-						<figure class="slick-items">
+						</div>
+						<div class="slick-items">
 							<img src="images/nextpower2.jpg" alt="넥스트파워홈페이지메인" />
-						</figure>
-						<figure class="slick-items">
+						</div>
+						<div class="slick-items">
 							<img src="images/nextpower3.jpg" alt="넥스트파워홈페이지메인" />
-						</figure>
-						<figure class="slick-items">
+						</div>
+						<div class="slick-items">
 							<img src="images/nextpower4.jpg" alt="넥스트파워홈페이지메인" />
-						</figure>
+						</div>
 					</div>
 				</div>
 			</div><!-- project -->
@@ -300,16 +302,176 @@
 
 <script type="text/javascript">
 	//fullpage
-	$(function(){	
-		$('#fullpage').fullpage({
-			anchors: ['1', '2', '3', '4', '5'],
-			navigation: true,
-			navigationPosition: 'left',
-			navigationTooltips: ['자기소개', '포트폴리오', '포트폴리오', '포트폴리오', '메뉴'],
-			responsiveWidth: 767,
-			afterRender: function(){
-				new WOW().init();
-				$('#project-slick').slick({
+	// $(function(){	
+	// 	$('#fullpage').fullpage({
+	// 		anchors: ['1', '2', '3', '4', '5'],
+	// 		navigation: true,
+	// 		navigationPosition: 'left',
+	// 		navigationTooltips: ['자기소개', '포트폴리오', '포트폴리오', '포트폴리오', '메뉴'],
+	// 		responsiveWidth: 767,
+	// 		afterRender: function(){
+	// 			new WOW().init();
+	// 			$('#project-slick').slick({
+	// 				infinite: true,
+	// 				arrows: false,
+	// 				slidesToShow: 1,
+	// 				slidesToScroll: 1,
+	// 				autoplay: true,
+	// 				speed: 40000,
+	// 				autoplaySpeed: 0,
+	// 				vertical: true,
+	// 				responsive: [
+	// 					{
+	// 						breakpoint: 1105,
+	// 						settings: {
+	// 							slidesToShow: 1	
+	// 						}
+	// 					},
+	// 					{
+	// 						breakpoint: 767,
+	// 						settings: {
+	// 							slidesToShow: 2
+	// 						}
+	// 					},
+	// 					{
+	// 						breakpoint: 578,
+	// 						settings: {
+	// 							slidesToShow: 1,
+	// 							centerMode: true
+	// 						}
+	// 					}
+						
+	// 				]
+	// 			});
+
+	// 			$('#project-slick2').slick({
+	// 				infinite: true,
+	// 				arrows: false,
+	// 				slidesToShow: 1,
+	// 				slidesToScroll: 1,
+	// 				autoplay: true,
+	// 				speed: 40000,
+	// 				autoplaySpeed: 0,
+	// 				vertical: true,
+	// 				responsive: [
+	// 					{
+	// 						breakpoint: 1105,
+	// 						settings: {
+	// 							slidesToShow: 1	
+	// 						}
+	// 					},
+	// 					{
+	// 						breakpoint: 767,
+	// 						settings: {
+	// 							slidesToShow: 2
+	// 						}
+	// 					},
+	// 					{
+	// 						breakpoint: 578,
+	// 						settings: {
+	// 							slidesToShow: 1,
+	// 							centerMode: true
+	// 						}
+	// 					}
+						
+	// 				]
+	// 			});
+
+	// 			$('#project-slick3').slick({
+	// 				infinite: true,
+	// 				slidesToShow: 2,
+	// 				slidesToScroll: 1,
+	// 				autoplay: true,
+	// 				speed: 3000,
+ 	// 				variableWidth: true,
+	// 				responsive: [
+	// 					{
+	// 						breakpoint: 1105,
+	// 						settings: {
+	// 							slidesToShow: 1	
+	// 						}
+	// 					},
+	// 					{
+	// 						breakpoint: 767,
+	// 						settings: {
+	// 							slidesToShow: 2
+	// 						}
+	// 					},
+	// 					{
+	// 						breakpoint: 578,
+	// 						settings: {
+	// 							slidesToShow: 1,
+	// 							centerMode: true
+	// 						}
+	// 					}
+						
+	// 				]
+	// 			});
+
+	// 			$('.code-slick').slick({
+	// 				infinite: true,
+	// 				slidesToShow: 1,
+	// 				slidesToScroll: 1,
+	// 				autoplay: true,
+	// 				speed: 1000,
+ 	// 				centerMode: true,
+	// 				arrows: false,
+	// 				responsive: [
+	// 					{
+	// 						breakpoint: 1105,
+	// 						settings: {
+	// 							slidesToShow: 1	
+	// 						}
+	// 					},
+	// 					{
+	// 						breakpoint: 767,
+	// 						settings: {
+	// 							slidesToShow: 2
+	// 						}
+	// 					},
+	// 					{
+	// 						breakpoint: 578,
+	// 						settings: {
+	// 							slidesToShow: 1,
+	// 							centerMode: true
+	// 						}
+	// 					}
+						
+	// 				]
+	// 			});
+
+				
+	// 		},
+	// 		onLeave : function(index, nextIndex, direction){	
+	// 			new WOW().init();
+
+	// 			// FOOTER
+	// 			// if( nextIndex == 5 || nextIndex == 6){
+	// 			// 	$('#header, #fp-nav').fadeOut();
+	// 			// }else {
+	// 			// 	$('#header, #fp-nav').fadeIn();
+	// 			// }
+				
+	// 		}
+	// 	});
+	// });
+	var fullPage = null;
+	
+	function setFullpage(){
+		fullPage = new fullpage('#fullpage',{
+				licenseKey:'61736A85-D1F34F84-A7DB4685-898A4841',
+				anchors: ['1', '2', '3', '4','5'],
+				navigation: true,
+				navigationPosition: 'left',
+				navigationTooltips: ['INTRO', 'PORTFOLIO', 'PORTFOLIO', 'PORTFOLIO', 'PR'],
+				responsiveWidth: 769,
+				afterLoad: function(){
+					$('.fadeInUp').css({'visibility' : 'visible','animation-name' : 'fadeInUp'});
+					
+				},
+				afterRender: function(){
+					new WOW().init();
+					$('#project-slick').slick({
 					infinite: true,
 					arrows: false,
 					slidesToShow: 1,
@@ -319,12 +481,12 @@
 					autoplaySpeed: 0,
 					vertical: true,
 					responsive: [
-						{
-							breakpoint: 1105,
-							settings: {
-								slidesToShow: 1	
-							}
-						},
+						// {
+						// 	breakpoint: 1105,
+						// 	settings: {
+						// 		slidesToShow: 1	
+						// 	}
+						// },
 						{
 							breakpoint: 767,
 							settings: {
@@ -352,12 +514,12 @@
 					autoplaySpeed: 0,
 					vertical: true,
 					responsive: [
-						{
-							breakpoint: 1105,
-							settings: {
-								slidesToShow: 1	
-							}
-						},
+						//{
+						//	breakpoint: 1105,
+						//	settings: {
+						//		slidesToShow: 1	
+						//	}
+						//},
 						{
 							breakpoint: 767,
 							settings: {
@@ -392,14 +554,14 @@
 						{
 							breakpoint: 767,
 							settings: {
-								slidesToShow: 2
+								//variableWidth: false,
+								slidesToShow: 1
 							}
 						},
 						{
 							breakpoint: 578,
 							settings: {
-								slidesToShow: 1,
-								centerMode: true
+								slidesToShow: 1
 							}
 						}
 						
@@ -416,12 +578,6 @@
 					arrows: false,
 					responsive: [
 						{
-							breakpoint: 1105,
-							settings: {
-								slidesToShow: 1	
-							}
-						},
-						{
 							breakpoint: 767,
 							settings: {
 								slidesToShow: 2
@@ -431,29 +587,90 @@
 							breakpoint: 578,
 							settings: {
 								slidesToShow: 1,
-								centerMode: true
 							}
 						}
 						
 					]
 				});
-
+				},
+				onLeave : function(index, nextIndex, direction){
+					new WOW().init();
+					
+					// FOOTER
+					if( nextIndex == 5 ){
+						$('#hd, #fp-nav').fadeOut();
+					}else {
+						$('#hd, #fp-nav').fadeIn();
+					}
+				},
+				verticalCentered:false,
+				//scrollOverflow: true,
+				scrollOverflowOptions: {
+					scrollbars: false,
+					preventDefault: false
+				},
+				keyboardScrolling: true,
+				animateAnchor: true,
+				recordHistory: true,
 				
+			});
+		}
+	$(document).ready(function() {
+		
+		setFullpage();
+
+		console.log(fullPage);
+		$(".move").focus(function(){
+			var idx = parseInt($(this).data("main-index")) + 1;
+			fullPage.moveTo(idx, 1000);
+
+		});
+		//main_slide
+		var pgArray = ["","01","02","03"];
+		var Mswiper = new Swiper(".main_Swiper", {
+			slidesPerView: "auto",
+			effect: "fade",
+			speed : 1000,
+			centeredSlides: true,
+			touchRatio: 0,
+			loop:true,
+			autoplay:{
+				delay: 7900,
+				disableOnInteraction: false,
 			},
-			onLeave : function(index, nextIndex, direction){	
-				new WOW().init();
-
-				// FOOTER
-				// if( nextIndex == 5 || nextIndex == 6){
-				// 	$('#header, #fp-nav').fadeOut();
-				// }else {
-				// 	$('#header, #fp-nav').fadeIn();
-				// }
-				
+			pagination: {
+				el: ".main_pagination",
+				clickable: true,
+				renderBullet: function (index, className) {
+					return '<a class="' + className + '"><span>' + pgArray[index + 1] + '</span></a>';
+				},
+			},
+			allowTouchMove: false,
+			breakpointsInverse: false,
+			breakpoints: {
+				1023: {
+					allowTouchMove: false,
+				}
 			}
 		});
+		
+		$(".SP_pause").on("click", function(){
+			Mswiper.autoplay.stop();
+			$(this).hide();
+			$(".SP_play").show();
+		});
+		$(".SP_play").on("click", function(){
+			Mswiper.autoplay.start();
+			$(this).hide();
+			$(".SP_pause").show();
+		});
+		$("#fp-nav li").eq(0).find(".fp-sr-only").text("페이지내 1/5영역 바로가기");
+		$("#fp-nav li").eq(1).find(".fp-sr-only").text("페이지내 2/5영역 바로가기");
+		$("#fp-nav li").eq(2).find(".fp-sr-only").text("페이지내 3/5영역 바로가기");
+		$("#fp-nav li").eq(3).find(".fp-sr-only").text("페이지내 4/5영역 바로가기");
+		$("#fp-nav li").eq(4).find(".fp-sr-only").text("페이지내 5/5영역 바로가기");
+		
 	});
-	
 </script>
 <script src="js/thema/portfolio.js"></script>
 
