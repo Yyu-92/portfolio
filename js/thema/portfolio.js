@@ -1,11 +1,13 @@
-$(function(){
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 90){
-			$('header').addClass('active');
-		} else{
-			$('header').removeClass('active');
-		}
-	});
+
+// 스크롤시 header에 class 추가, 삭제
+let header = document.querySelector('header');
+
+window.addEventListener('scroll', function(){
+	if (window.scrollY > 60){
+		header.classList.add('active');
+	} else{
+		header.classList.remove('active');
+	}
 });
 
 
