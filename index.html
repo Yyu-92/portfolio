@@ -120,7 +120,7 @@
 					</div>
 				</div>
 				<div class="pf-right">
-					<div id="project-slick">
+					<div id="project-slick1">
 						<figure class="slick-items">
 							<img src="images/enitt.jpg" alt="에니트홈페이지메인" />
 						</figure>
@@ -198,8 +198,8 @@
 					<h1>(주)넥스트파워<span class="block"></span> 홈페이지</h1>
 					<ul class="role">
 						<li>
-							<p>반응형으로 제작하여 모든 기기에서 적용 가능하도록 만들었습니다. 메인페이지는 풀페이지로 디자인하여
-								각 페이지마다 회사에 대한 정보가 부각될 수 있도록 하였습니다.
+							<p>제품 설명 위주의 서브페이지들로 구성되어있는 홈페이지입니다. 
+								제품 검색 기능에 맞춰 검색 필드와 검색 결과 페이지까지 제작하였습니다.
 							</p>
 						</li>
 						<li><span class="role-name">PUBLISHING</span> <span class="percentage"></span></li>
@@ -214,18 +214,20 @@
 					</div>
 				</div>
 				<div class="pf-right">
-					<div id="project-slick3">
-						<div class="slick-items">
-							<img src="images/nextpower.jpg" alt="넥스트파워홈페이지메인" />
-						</div>
-						<div class="slick-items">
-							<img src="images/nextpower2.jpg" alt="넥스트파워홈페이지메인" />
-						</div>
-						<div class="slick-items">
-							<img src="images/nextpower3.jpg" alt="넥스트파워홈페이지메인" />
-						</div>
-						<div class="slick-items">
-							<img src="images/nextpower4.jpg" alt="넥스트파워홈페이지메인" />
+					<div class="pf-right-inner">
+						<div id="project-slick3">
+							<figure class="slick-items">
+								<img src="images/nextpower.jpg" alt="넥스트파워홈페이지서브" />
+							</figure>
+							<figure class="slick-items">
+								<img src="images/nextpower2.jpg" alt="넥스트파워홈페이지서브" />
+							</figure>
+							<figure class="slick-items">
+								<img src="images/nextpower3.jpg" alt="넥스트파워홈페이지서브" />
+							</figure>
+							<figure class="slick-items">
+								<img src="images/nextpower4.jpg" alt="넥스트파워홈페이지서브" />
+							</figure>
 						</div>
 					</div>
 				</div>
@@ -300,6 +302,7 @@
 </body>
 
 <script type="text/javascript">
+	
 	let fullPage = null;
 	
 	function setFullpage(){
@@ -315,8 +318,8 @@
 				},
 				afterRender: function(){
 					new WOW().init();
-					
-					$('#project-slick').slick({
+
+					$('#project-slick1').slick({
 					infinite: true,
 					arrows: false,
 					slidesToShow: 1,
@@ -344,7 +347,21 @@
 					slidesToScroll: 1,
 					autoplay: true,
 					speed: 3000,
- 					variableWidth: true,
+					responsive: [
+						{
+							breakpoint: 767,
+							settings: {
+								slidesToShow: 1
+							}
+						},
+						{
+							breakpoint: 578,
+							settings: {
+								slidesToShow: 1,
+							}
+						}
+						
+					]
 				});
 
 				$('.code-slick').slick({
@@ -372,7 +389,7 @@
 					]
 				});
 				},
-				onLeave : function(index, nextIndex, direction){
+				onLeave : function(){
 					new WOW().init();
 					
 					// FOOTER
@@ -394,9 +411,10 @@
 				
 			});
 		}
-
 		
 		setFullpage();
+
+		
 	
 </script>
 <script src="js/thema/portfolio.js"></script>
