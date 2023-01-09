@@ -1,4 +1,3 @@
-
 // 스크롤시 header에 class 추가, 삭제
 let header = document.querySelector('header');
 
@@ -9,8 +8,6 @@ window.addEventListener('scroll', function(){
 		header.classList.remove('active');
 	}
 });
-
-
 
 // 더보기 창 끄기
 let closeList = [].slice.call(document.getElementsByClassName('close-btn'));
@@ -24,3 +21,7 @@ function clickClose(){
 }
 
 clickClose();
+
+
+
+	
