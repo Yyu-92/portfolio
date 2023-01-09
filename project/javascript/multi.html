@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>구구단 게임</title>
+
+    <style>
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>구구단 게임</h1>
+
+    <li style="margin-bottom:5px;">랜덤값으로 지정할 수 있는 최대 자릿수는 3입니다.</li>
+    <li style="margin-bottom:5px;">자릿수를 등록하면 해당 자릿수 크기의 숫자 2개가 랜덤으로 표시 됩니다.</li>
+    <li style="margin-bottom:5px;">랜덤으로 표시되는 2개 숫자의 곱셈값을 기록하세요.</li>
+    <div class="setDigitForm">
+      <label for="setDigitNum">자릿수를 설정해주세요: </label>
+      <input type="text" id="setDigitNum" class="setDigitNum">
+      <input type="submit" value="등록" class="setDigitSubmit">
+    </div>
+	
+    <div class="form" style="margin-top:40px;">
+      <span id="randA">랜덤값A</span> X <span id="randB">랜덤값B</span> =  <input type="text" id="guessField" class="guessField">
+      <input type="submit" value="정답확인" class="guessSubmit">
+    </div>
+
+    <div class="resultArea" style="margin-top:40px;">
+      <span>정답여부는 여기에!!</span>
+    </div>
+
+    <script>
+
+      /**
+       * 1-3자릿수 랜덤값뽑기
+       * 사용자가 숫자를 입력하고 등록을 누르면 해당 숫자만큼의 자릿수를 가진 2개의 숫자가 랜덤으로 추출되어 각각 랜덤값A,B부분에 표시
+       * 사용자가 정답을 입력하고 정답확인을 누르면 정답여부가 표시
+       */
+
+      var ranNum1 = 0; // 두개의 랜덤값
+      var ranNum2 = 0;
+      var max = 0; // 랜덤값을 뽑을 때 사용할 각 자릿수의 최댓값과 최솟값
+      var min = 0;
+      var inputNum = 0; // 사용자가 입력할 자릿수
+    
+      /** setDigitSubmit('등록')에 addEventListener을 부여하여 클릭했을 때 랜덤값 뽑기 */
+      document.getElementsByClassName('setDigitSubmit')[0].addEventListener('click', function(){
+        inputNum = Number(document.getElementById('setDigitNum').value); // string -> number 형변환
+        
+        /**
+         * 입력한 자릿수에 따라 랜덤값을 다르게 제공하기 위해서 
+         * Math.floor((Math.random()*(max-min))+min) 식 사용 ==> 자릿수에 따라 max와 min을 변경하여 자릿수에 맞는 랜덤값 추출
+         * Math.random() ==> 0.0000000~0.9999999 사이의 랜덤값 제공
+         * ex)1자릿수 추출=> 그냥 10을 곱하면, 0~9.xxxxx의 값이 나온다.
+         * 1~9의 값이 나와야하기 때문에 10(max)-1(min)=9를 곱해주면, 0~8.xxxxx의 값이 나오고 여기서 1(min)값을 더해주면 1~9.xxxxx의 값이 나온다. 
+         * Math.floor() ==> 소수점 이하를 버림
+         */
+
+        if(isNaN(inputNum) || inputNum === 0 || inputNum > 3){ // isNaN ==> 매개변수가 숫자가 아니면 true, 숫자이면 false를 반환
+          alert("숫자이며 1~3사이여야합니다~!");
+        }else{     
+          switch(inputNum){
+            case 1 :
+              max = 10;
+              min = 1;
+              break;
+            case 2 :
+              max = 100;
+              min = 10;
+              break;
+            case 3 :
+              max = 1000;
+              min = 100;
+              break;
+            default :
+            alert("숫자이며 1~3사이여야합니다~!");
+          }
+          
+          ranNum1 = Math.floor((Math.random()*(max-min))+min);
+          ranNum2 = Math.floor((Math.random()*(max-min))+min);
+
+          /** 사용자가 볼 수 있도록 추출된 랜덤값이 화면에 출력 */
+          document.getElementById('randA').innerText = ranNum1;
+          document.getElementById('randB').innerText = ranNum2;
+
+          document.getElementById('guessField').placeholder = '정답을 입력해주세요.';
+        }   
+      });
+
+      /** 정답확인하기 */
+      var answerArea = document.getElementsByClassName('resultArea')[0].getElementsByTagName('span')[0];
+      var resNum = 0; // 사용자가 입력한 정답숫자
+
+      /** 버튼 비활성화 함수 */
+      function disabled(){
+        document.getElementsByClassName('guessSubmit')[0].disabled = true;
+      }
+      
+      /** 정답을 입력하고 '정답확인'을 누르면 정답여부가 표시 */
+      document.getElementsByClassName('guessSubmit')[0].addEventListener('click', function(){
+        resNum = Number(document.getElementById('guessField').value); // string -> number 형변환
+
+        if(ranNum1 * ranNum2 === resNum){
+          answerArea.innerText = resNum + "은(는) 정답입니다~!";
+          disabled();
+          
+        }else{
+          answerArea.innerText = resNum + "은(는) 정답이 아닙니다~!";
+        }
+      });
+
+    </script>
+  </body>
+</html>
