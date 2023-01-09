@@ -112,10 +112,11 @@ i:before{vertical-align:middle;}
 
 /* portfolio3 */
 #portfolio3 .pf-right{display:flex;align-items:center;}
+#portfolio3 .pf-right .pf-right-inner{width:100%;}
 #portfolio3 .pf-right .slick-list{overflow:hidden;}
-#portfolio3 .slick-items{padding-right:50px;}
-#portfolio3 .slick-items img{width:auto;height:87vh;border:1px dotted #00b4af;}
-#portfolio3 .slick-prev, #portfolio3 .slick-next{background:#fff;z-index:999;top:auto;border:1px solid #00b4af;width:37px;height:37px;box-sizing:border-box;bottom:-66px;}
+#portfolio3 .slick-items{}
+#portfolio3 .slick-items img{width:88%;margin:0 auto;border:1px solid #00b4af;}
+#portfolio3 .slick-prev, #portfolio3 .slick-next{background:#fff;z-index:999;top:auto;border:1px solid #00b4af;width:37px;height:37px;box-sizing:border-box;bottom:-88px;}
 #portfolio3 .slick-prev{left:0px;}
 #portfolio3 .slick-next{right:auto;left:42px;}
 #portfolio3 .slick-prev::before, #portfolio3 .slick-next::before{color:#00b4af;content:'◀';font-size:13px;font-family:inherit;}
@@ -183,6 +184,7 @@ i:before{vertical-align:middle;}
 	.portfolio.right{padding:0 10% 0 0;}
 	.portfolio.right .role{padding-left:30px;}
 	.portfolio.right .url-inner{padding:10px 15px 10px 38px;}
+	#portfolio3 .slick-items img{width:92%;}
 	
 	/*skill*/
 	.skill{padding:0 5%;}
@@ -256,12 +258,13 @@ i:before{vertical-align:middle;}
 	.portfolio.right .url-inner{padding:10px 38px 10px 15px;}
 	.portfolio.right .close-btn{left:auto;right:9px;}
 
-	#portfolio3 .pf-right{box-shadow:none;overflow:visible;}
-	#project-slick3{height:100%;}
+	#portfolio3 .pf-right{box-shadow:none;display:block;overflow:visible;}
+	#project-slick3{height:100%;overflow:visible;}
+	#portfolio3 .pf-right .pf-right-inner{height:100%;}
 	#portfolio3 .pf-right .slick-list{height:100%;}
 	#portfolio3 .pf-right .slick-track{height:100%;}
 	#portfolio3 .slick-items{margin:0 10px;padding-right:0;height:100%;}
-	#portfolio3 .slick-items img{width:auto;height:100%;}
+	#portfolio3 .slick-items img{width:auto;height:98%;}
 	#portfolio3 .slick-prev{left:10px;bottom:auto;top:-50px;}
 	#portfolio3 .slick-next{left:52px;bottom:auto;top:-50px;}
 
