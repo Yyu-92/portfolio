@@ -234,8 +234,8 @@ body:not(.fp-viewing-1) #header.on .menu-btn{top:100px;}
 .en-slick .slick-arrow{width:55px;height:55px;border:1px solid #0070c0;box-sizing:border-box;transition:all 0.4s;;transform:translate(0);-webkit-transform:translate(0);}
 .slick-next{right:15px;top:-124px;}
 .slick-prev{left:auto;right:82px;top:-124px}
-.en-slick .slick-arrow.slick-prev:before{content:"\e93b"; font-family:'xeicon'; font-size:29px; color:#0070c0;opacity:1;transition:all 0.4s;}
-.en-slick .slick-arrow.slick-next:before{content:"\e93e"; font-family:'xeicon'; font-size:29px; color:#0070c0;opacity:1;transition:all 0.4s;}
+.en-slick .slick-arrow.slick-prev:before{content:"←"; font-size:29px; color:#0070c0;opacity:1;transition:all 0.4s;font-family:inherit;}
+.en-slick .slick-arrow.slick-next:before{content:"→";  font-size:29px; color:#0070c0;opacity:1;transition:all 0.4s;font-family:inherit;}
 .en-slick .slick-arrow.slick-prev:hover, .en-slick .slick-arrow.slick-next:hover{background:#0070c0;}
 .en-slick .slick-arrow.slick-prev:hover:before, .en-slick .slick-arrow.slick-next:hover:before{color:#fff;}
 
