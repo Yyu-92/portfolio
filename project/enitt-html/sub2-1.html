@@ -118,7 +118,7 @@
 
 <!-- sub-nav -->	
 <div class="sub-nav sub-nav1">
-	<button type="button" class="visible-sm">e-DAS  <i class="xi-angle-down-min"></i></button>
+	<button type="button" class="visible-sm">e-DAS <i>▼</i></button>
 	<ul class="hidden-sm">
 		<li class="selected"><a href="sub2-1.html">e-DAS</a>
 		<li><a style="opacity:0.3;">e-DTS</a>
@@ -135,6 +135,8 @@
 	<div id="sub2-1" class="s-section">
 		<div class="product">
 			<div class="section-wrap">		
+
+				<!-- product-slider -->
 				<div class="product-slider">
 					<div class="slider-img">
 						<div class="prdImg" style="background:url(images/sub/product1.jpg)no-repeat center;"></div>
@@ -147,8 +149,10 @@
 						<div class="thumb-box"><div class="thumb-img" style="background:url(images/sub/product1-3.jpg)no-repeat;"></div></div>			
 					</div><!-- /section-wrap -->
 				</div><!-- /slider-thumb -->
-			</div><!-- /product-slider -->
+			</div>
+			<!-- /product-slider -->
 			
+			<!-- view-contents -->
 			<div class="view-contents">
 				<div class="view-txt">	
 					<div class="section-wrap">		
@@ -179,7 +183,10 @@
 						 <div class="instance"><img src="images/sub/instance1.jpg"  alt="기차이미지" /></div>
 					 </div><!-- /section-wrap -->
 				</div><!-- /view-txt -->
-			</div><!-- /view-contents -->
+			</div>
+			<!-- /view-contents -->
+
+			<!-- view-contents -->
 			<div class="view-contents">
 				<div class="view-txt">
 					<div class="feature2">
@@ -223,7 +230,10 @@
 						</div><!-- /section-wrap -->
 					</div>
 				</div><!-- /view-txt -->
-			</div><!-- /view-contents -->
+			</div>
+			<!-- /view-contents -->
+
+			<!-- view-contents -->
 			<div class="view-contents">
 				<div class="view-txt">
 					<div class="section-wrap row">
@@ -254,8 +264,11 @@
 						</div>
 					</div><!-- /section-wrap -->
 				</div><!-- /view-txt -->
-			</div><!-- /view-contents -->
-			<div class="view-contents last	">
+			</div>
+			<!-- /view-contents -->
+			
+			<!-- view-contents -->
+			<div class="view-contents last">
 				<div class="view-txt">
 					<div class="section-wrap row">
 						<div class="col-2 col-sm-12">
@@ -287,18 +300,17 @@
 						</div>
 					</div><!-- /section-wrap -->
 				</div><!-- /view-txt -->
-			</div><!-- /view-contents -->
+			</div>
+			<!-- /view-contents -->
+
 		</div>
 	</div><!-- s-section -->
-	
 </div>
 <!-- section -->
 
-
 <div class="btn-up-wrap">
-	<a class="btn-up"><i class="xi-long-arrow-up"></i></a>
+	<a class="btn-up">↑</a>
 </div>
-
 
 <!-- footer -->
 <div class="footer">
@@ -337,34 +349,34 @@
 
 $(document).ready(function(){
 		
-		new WOW().init();
-		
-		 //PRODUCT
-		 $('.slider-img').slick({
-		  slidesToShow: 1,
-		  slidesToScroll: 1,
-		  arrows: true,
-		  fade: true,
-		  asNavFor: '.slider-thumb'
-		});
-		$('.slider-thumb').slick({
-		  slidesToShow: 5,
-		  slidesToScroll: 1,
-		  asNavFor: '.slider-img',
-		  dots: false,
-		  centerMode: false,
-		  focusOnSelect: true,
-		  responsive: [
-			    {
-			      breakpoint: 768,
-			      settings: {
-			        //slidesToShow: 1,
-			        //centerMode: true
-			        //arrows: true
-			      }
-			    }
-			  ]
-		});
+	new WOW().init();
+	
+		//PRODUCT
+		$('.slider-img').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		fade: true,
+		asNavFor: '.slider-thumb'
+	});
+	$('.slider-thumb').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		asNavFor: '.slider-img',
+		dots: false,
+		centerMode: false,
+		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+				//slidesToShow: 1,
+				//centerMode: true
+				//arrows: true
+				}
+			}
+			]
+	});
 });
 
 </script>

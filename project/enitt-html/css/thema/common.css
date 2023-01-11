@@ -72,11 +72,8 @@
 .ham.active .line3{transform:translateY(-9px) rotate(-45deg);}
 
 /* up_btn */
-.btn-up-wrap{position:fixed;right:0;bottom:9%;}
-.btn-up{display:block;width:70px;height:70px;background:#0070c0;text-align:center;cursor:pointer;transition:all 0.5s;}
-.btn-up i{color:#fff;font-size:29px;line-height:70px;}
-
-
+.btn-up-wrap{position:fixed;right:0;bottom:9%;z-index:999;}
+.btn-up{display:block;width:70px;height:70px;background:#0070c0;text-align:center;cursor:pointer;transition:all 0.5s;line-height:70px;font-size:25px;color:#fff;}
 
 
 @media all and (max-width:1199px){
@@ -105,9 +102,6 @@
 	.ft-list{margin-top:105px;}
 	.ft-list ul li{display:table;margin:6px 0 6px auto;}
 	.ft-list ul li:first-child{margin-left:auto;}
-	
-
-
 }
 
 @media all and (max-width:767px){
@@ -135,9 +129,7 @@
 	.ft-list ul li{display:inline-block;}
 	.ft-list ul li a{font-size:12.5px;}
 	
-	
-	.btn-up{width:60px;height:60px;}
-	.btn-up i{line-height:60px;font-size:24px;}
+	.btn-up{width:60px;height:60px;line-height:60px;font-size:20px;}
 }
 
 @media all and (max-width:525px){

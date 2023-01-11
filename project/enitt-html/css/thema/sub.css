@@ -400,7 +400,7 @@
 	.sub-top-title p{font-size:20px;}
 	
 	.sub-nav > button{text-align:left;width:100%;border:none;font-size:16px;  padding:0 3%; color:#fff;line-height:45px; box-sizing:border-box; position:relative; white-space:nowrap; word-break:break-all; text-overflow:ellipsis; overflow:hidden;}
-	.sub-nav > button i{transition:all 0.4s; position:absolute; right:3%;top:0;line-height:45px;font-size:17px;}
+	.sub-nav > button i{transition:all 0.4s; position:absolute; right:3%;top:0;line-height:45px;font-size:10px;font-style:normal;}
 	.sub-nav > button.on i{transform:rotate(180deg);}
 	.sub-nav{box-sizing:border-box;position:inherit;left:inherit;width:93%;margin:-70px auto 0;}
 	.sub-nav ul{ position:absolute; z-index:600; width:93%;box-sizing:border-box;background:#fdfdfd;border:1px solid #e1e1e1;}
