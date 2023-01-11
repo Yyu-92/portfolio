@@ -37,7 +37,6 @@
 <link rel="stylesheet" href="css/thema/common.css" type="text/css" />
 <link rel="stylesheet" href="css/thema/main.css" type="text/css" />
 
-
 <script src="js/plugins/jquery-3.3.1.min.js"></script>
 <script src="js/plugins/unslider-min.js"></script>
 <script src="js/plugins/wow.min.js"></script>
@@ -88,6 +87,7 @@
 		</div><!-- /ham -->
 	</div><!-- /#header -->
 </header>
+<!-- /header -->
 
 <!-- slide -->
 <div id="slide" class="main_slider">
@@ -117,6 +117,8 @@
 
 <!-- section -->
 <div id="section">
+
+	<!-- section1 -->
 	<div class="section1">
 		<div class="section-wrap">
 			
@@ -148,8 +150,10 @@
 			</div><!-- /about -->
 			
 		</div><!--/ section-wrap -->
-	</div><!-- /section1 -->
+	</div>
+	<!-- /section1 -->
 	
+	<!-- section2 -->
 	<div class="section2">
 		<div class="ideaBg">
 			<div class="section-wrap">
@@ -163,8 +167,10 @@
 				</div><!-- /idea -->
 			</div><!--/ section-wrap -->
 		</div><!-- /ideaBg -->
-	</div><!-- /section2 -->
+	</div>
+	<!-- /section2 -->
 	
+	<!-- section3 -->
 	<div class="section3">
 		<div class="product">
 			<div class="titleWrap">
@@ -224,8 +230,10 @@
 				
 			</div>
 		</div><!-- /product -->
-	</div><!-- /section3 -->
+	</div>
+	<!-- /section3 -->
 
+	<!-- section4 -->
 	<div class="section4">
 		<div class="process">
 			<h1><span class="wow fadeInUp">MANUFACTURING</span><span class="wow fadeInUp" data-wow-delay="0.2s">PROCESS</span></h1>
@@ -293,10 +301,12 @@
 				</div>
 			</div>
 		</div><!-- /process -->
-	</div><!-- /section4 -->	
+	</div>
+	<!-- /section4 -->	
 </div>
 <!-- /section -->
 
+<!-- shop -->
 <div id="shop">
 	<div class="shop">
 		<div class="shop-slick">
@@ -326,7 +336,8 @@
 			<p>다른<br /> <span class="bold6">판매처</span> 보기</p>
 		</div>
 	</div>
-</div><!-- /shop -->
+</div>
+<!-- /shop -->
 
 <div class="btn-up-wrap">
 	<a class="btn-up">↑</a>
@@ -386,7 +397,6 @@
 				</ul>
 			</div>
 		</div>
-		
 	</div><!-- /footer -->
 </footer>
 <!-- /footer -->
@@ -412,70 +422,66 @@ $(document).ready(function(){
 	  
 	  //제품 슬라이드
 	  $('.product-slick').slick({
-		  slidesToShow: 3,
-		  slidesToScroll: 1,
-		  autoplay: true,
-		  autoplaySpeed: 2000,
-		 responsive: [
+		 	slidesToShow: 3,
+		  	slidesToScroll: 1,
+			autoplay: true,
+		  	autoplaySpeed: 2000,
+			responsive: [
 			    {
-			      breakpoint: 1199,
-			      settings: {
-			        slidesToShow: 2
+			      	breakpoint: 1199,
+			      	settings: {
+						slidesToShow: 2
 			      }
 			    },
 			    {
-				      breakpoint: 922,
-				      settings: {
+				    breakpoint: 922,
+				    settings: {
 				        slidesToShow: 1
-				      }
-				    },
-				    {
-					      breakpoint: 767,
-					      settings: {
-					        slidesToShow: 2
-					      }
-					    },
-					    {
-						      breakpoint: 525,
-						      settings: {
-						        slidesToShow: 1
-						      }
-						    }
-			  ]
+				    }
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 525,
+					settings: {
+						slidesToShow: 1
+					}
+				}
+			]
 		});
 	  
-		
 		//제품공정
 		$('.process-slick').slick({
-			  centerMode: false,
-			  centerPadding: '0px',
-			  slidesToShow: 2,
-			  autoplay: true,
-			  autoplaySpeed: 4000,
-			  responsive: [
+			centerMode: false,
+			centerPadding: '0px',
+			slidesToShow: 2,
+			autoplay: true,
+			autoplaySpeed: 4000,
+			responsive: [
 			    {
-			      breakpoint: 595,
-			      settings: {
-			        slidesToShow: 1
-			      }
+			      	breakpoint: 595,
+			      	settings: {
+			       		slidesToShow: 1
+					}
 			    }
-			  ]
-			});
+			]
+		});
 		
 		//판매처
 		$('.shop-slick').slick({
-			  centerMode: false,
-			  centerPadding: '0px',
-			  slidesToShow: 1,
-			  autoplay: true,
-			  dots: true,
-			  autoplaySpeed: 4000	 
-			});
-	
+			centerMode: false,
+			centerPadding: '0px',
+			slidesToShow: 1,
+			autoplay: true,
+			dots: true,
+			autoplaySpeed: 4000	 
+		});
 	});
 
-	
 </script>
-
 
 </html>
