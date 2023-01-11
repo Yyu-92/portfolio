@@ -137,8 +137,11 @@ i:before{vertical-align:middle;}
 
 .code-slick .slick-list{padding:0 !important;}
 .code-slick li:hover{cursor:grab;}
-.code-slick li figure{padding:0 4px;}
-.code-slick li img{width:100%;}
+.code-slick .code-list{padding:0 4px;position:relative;}
+.code-slick .code-list > img{width:100%;}
+.script-btn{position:absolute;right:13px;top:11px;}
+.script-btn img{width:23px;opacity:0.6;transition:all 0.5s;}
+.script-btn:hover img{opacity:1;}
 
 .skill-right{width:64%;}
 .skill_list{width:100%;padding:0 2%;box-sizing:border-box;}
@@ -273,6 +276,7 @@ i:before{vertical-align:middle;}
 	.skill-left{width:100%;padding:0 0 65px 0;}
 	.skill-top h3{display:block;}
 	.skill-top p{margin-top:0;}
+	.script-btn img{width:21px;}
 
 	.skill-right{width:100%;}
 	.skill_list li div{padding:22px 0 32px;}
