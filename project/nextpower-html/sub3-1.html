@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- 포탈사이트 검색등록 -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!-- robots read -->
+<meta name="robots" content="index,follow" /><!-- 이 문서도 긁어가고 링크된 문서도 긁어감. -->
+<!-- 
+<meta name="robots" content="noindex,follow" /> 이 문서는 긁어가지 말고 링크된 문서만 긁어감.
+<meta name="robots" content="index,nofollow" /> 이 문서는 긁어가되, 링크는 무시함.  
+<meta name="robots" content="noindex,nofollow" /> 이 문서도 긁지 않고, 링크도 무시함.
+-->
+<!-- 오픈그래프 설정 -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<meta property="og:url" content="" />
+
+<!-- 파비콘 설정 -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+<title>NEXTPOWER</title>
+
+<link rel="stylesheet" href="css/plugins/animate.css" type="text/css" />
+
+<link rel="stylesheet" href="css/thema/basic.css" type="text/css" />
+<link rel="stylesheet" href="css/thema/common.css" type="text/css" />
+<link rel="stylesheet" href="css/thema/sub.css" type="text/css" />
+
+<script src="js/plugins/jquery-3.3.1.min.js"></script>
+<script src="js/plugins/wow.min.js"></script>
+</head>
+
+<body>
+<!-- header -->
+<header>
+	<div id="header">
+		<!-- top-header -->
+		<div class="top-header">
+			<div class="inner">
+				<div class="logo"><a href="index.html" title="메인으로 이동">
+					<img src="images/main/logo.png" alt="(주)넥스트파워" class="logo"></a>
+				</div>
+				<div class="big-search-wrap">
+					<form id="formTotalSearch" method="get">	
+						<div class="big-search-bar">
+							<input type="text" id="productSearchStr" name="productSearchStr" class="search-product" onkeypress="board_search_enter(document.keyword);" value="" placeholder="SEARCH">
+							<button type="button" id="product_search_btn"><i><img src="images/main/glasses.png" alt="돋보기아이콘" /></i></button>
+						</div>
+					</form>
+					<script>
+					
+						$(document).ready(function() {
+							$("#product_search_btn").click(function() {
+								if ($("#productSearchStr").val() == '') {
+									alert("검색어를 입력하세요!");
+									return false;
+								}else {
+									//var act = "/search";
+									var act = "/sub7-1.html";
+									$("#formTotalSearch").attr('action', act).submit();
+									//alert(act);
+								}
+							});
+						});
+
+					</script>
+				</div><!-- /big-search-wrap -->
+			</div><!-- /inner -->
+			
+			<div class="h-inquiry">
+				<a href="#" class="btn-inquiry"><span><img src="images/main/inquiry-icon.png">INQUIRY</span></a>
+			</div><!-- /h-inquiry -->
+		</div>
+		<!-- /top-header -->
+		
+		<!-- bottom-header -->
+		<div class="bottom-header">
+			<div class="menu hidden-lg m-menu">
+				<ul>
+					<li><a>ABOUT</a>
+						<ul class="sub-menu">
+							<li><a href="sub1-1.html">About</a></li>
+							<li><a href="sub1-2.html">Ceo</a></li>
+							<li><a href="sub1-3.html">Organization</a></li>
+							<li><a style="opacity:0.3">Patent & Certification</a></li>
+							<li><a href="sub1-5.html">Directions</a></li>
+						</ul>
+					</li>
+					<li><a href="sub2-1.html">PHOTOVOLTAIC <span class="wm-block"></span>INVERTER</a></li>
+					<li><a href="sub3-1.html">ESS SYSTEM</a></li>
+					<li><a href="sub4-1.html">PCB</a></li>
+					<li><a href="sub5-1.html">ELECTRIC POWER <span class="wm-block"></span>CONVERTING DEVICES</a></li>
+					<li><a>CUSTOMER</a>
+						<ul class="sub-menu">
+							<li><a style="opacity:0.3">Notice</a></li>
+							<li><a style="opacity:0.3">Inquiry</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /menu -->
+			
+			<div class="ham visible-lg">
+				<a class="open"><i class="xi-bars"></i></a>
+				<a class="close"><i class="xi-close"></i></a>
+			</div><!-- /ham -->
+		</div>
+		<!-- /bottom-header -->
+	</div><!-- /#header -->
+</header>
+<!-- /header -->
+
+<!-- sub-top -->
+<div id="sub-top">
+	<div class="sub-top5 sub-top-bg"></div> 
+	<div class="s-top-title">	
+		<span>NEXTPOWER</span>	
+		<h1>ESS SYSTEM</h1>
+	</div>
+</div>
+<!-- /sub-top -->
+
+<!-- sub-nav -->
+<div id="sub-nav">
+	<ul>
+		<li class="nav-home hidden-sm"><a href="index.html"><i><img src="images/sub/home.png" alt="홈아이콘" /></i></a></li>
+		<li class="nav-menu hidden-sm"><a>ESS SYSTEM</a>
+			<ul>
+				<li ><a href="sub1-1.html">ABOUT</a></li>					
+				<li ><a href="sub2-1.html">PHOTOVOLTAIC INVERTER</a></li>
+				<li class="selected"><a href="sub3-1.html">ESS SYSTEM</a></li>
+				<li ><a href="sub4-1.html">PCB</a></li>
+				<li ><a href="sub5-1.html">ELECTRIC POWER CONVERTING DEVICES</a></li>
+				<li ><a style="opacity:0.3">CUSTOMER</a></li>
+			</ul>
+		</li>
+		<li class="nav-menu"><a>ESS System</a>
+			<ul>
+				<li ><a href="sub3-1.html">ESS System</a></li>					
+			</ul>
+		</li>
+	</ul>
+</div>
+<!-- /sub-nav -->
+
+
+<!-- section -->
+<div id="section">
+	
+	<div id="sub3-1" class="s-section">
+		<div class="s-title"><h2>ESS System</h2></div>
+		
+		<div class="section-wrap">
+			<div class="product">
+				
+				<div class="product-info">
+					<div class="col-6 col-sm-12">
+						<div class="product-img"><img src="images/sub/product2.jpg" alt="" /></div>
+					</div><!-- /col -->
+					<div class="col-6 col-sm-12">
+						<div class="product-txt">
+							<p class="wow fadeInUp"><span class="b400 color-b">NEXTPOWER Co., Ltd</span> provides the optimum solution for ESS construction 
+							through close collaboration with partners specialized in design, installation, and maintenance & repair, based on its own manpower equipped 
+							with expertise related to ESS system & electricity.<br />
+							We are putting the best effort for maximizing the customer value by providing the highly-reliable system minimizing the risks
+							 based on various battery systems and PCS-connected technologies, and then guaranteeing the economical and stable operation.
+							</p>
+						</div>
+					</div><!-- /col -->
+				</div><!-- /product-info -->
+				
+				<div class="sub-contents">
+					<div class="s-s-title">
+							<h3>Special Features of ESS System</h3>
+					</div><!-- /s-s-title -->
+					
+					<div class="feature">
+						<div class="row">
+							<div class="col-6 col-sm-12">
+								<div class="feature-list left">
+									<img src="images/sub/sf_icon6.png" alt="" />
+									<h4>01. Optimum technology</h4>
+									<p>Equipped with every ESS engineering function and design competencies based on accumulated experiences in various areas</p>
+								</div>
+							</div><!-- /col -->
+													
+							<div class="col-6 col-sm-12">
+								<div class="feature-list right">
+									<img src="images/sub/sf_icon7.png" alt="" />
+									<h4>02. Systematic operating skills</h4>
+									<p>Equipped with analysis skills of various batteries for the economical and stable operation of ESS system</p>
+								</div>
+							</div><!-- /col -->							
+						</div><!-- /row -->
+						
+						<div class="row">
+							<div class="col-6 col-sm-12">
+								<div class="feature-list left">
+									<img src="images/sub/sf_icon8.png" alt="" />
+									<h4>03. Securement of price competitiveness</h4>
+									<p>Securement of price competitiveness</p>
+								</div>
+							</div><!-- /col -->		
+							
+							<div class="col-6 col-sm-12">
+								<div class="feature-list right">
+									<img src="images/sub/sf_icon9.png" alt="" />
+									<h4>04. Excellent durability</h4>
+									<p>Design considering a long lifespan, increase of fan lifespan through control of fan speed, and improvement of efficiency</p>
+								</div>
+							</div><!-- /col -->		
+						</div><!-- /row -->						
+					</div><!-- /feature -->
+				</div><!-- /sub-contents -->
+				
+				<div class="sub-contents">
+					<div class="s-s-title">
+							<h3>Introduction of Products</h3>
+					</div><!-- /s-s-title -->
+					
+					<div class="p-list-wrap">
+						<ul class="p-list-box">
+							<li class="product-list wow fadeInUp">
+								<div class="p1-img">
+									<img src="images/sub/p2-1.jpg" alt="" />
+								</div>					
+								<div class="function-txt p-title">
+									<h3 class="s-m-title">ESS inverter 50kW, 100kW, and 250kW</h3>
+									<ul>
+										<li>Acquisition of SGSF Certification</li>
+										<li>Acquisition of KC Certification</li>
+									</ul>
+								</div>
+							</li>
+						</ul><!-- /p-list-box -->
+					</div><!-- /p-list-wrap  -->
+				</div><!-- /sub-contents -->
+				
+			</div><!-- /product -->			
+		</div><!-- /section-wrap -->
+		
+		<div class="design">
+
+			<div class="sub-contents contents-bg">
+				<div class="section-wrap">
+					<div class="s-s-title">
+							<h3>Battery Design Technology</h3>
+					</div><!-- /s-s-title -->
+					
+					<div class="procedure">
+						<h3 class="s-m-title s-m-title2">Design procedures</h3>					
+						<ul>	
+							<li><div class="design-txt"><span>01</span><p>Market & policy analysis</p></div></li>
+							<li><div class="design-txt"><span>02</span><p>Decision of operating measures</p></div></li>
+							<li><div class="design-txt"><span>03</span><p>Calculation of battery operation capacity</p></div></li>
+							<li><div class="design-txt"><span>04</span><p>Analysis of life expectancy</p></div></li>
+							<li><div class="design-txt"><span>05</span><p>Calculation of battery optimum capacity</p></div></li>					
+						</ul>
+					</div><!-- /procedure -->					
+				</div><!-- /section-wrap -->
+			</div><!-- /sub-contents -->
+			
+			<div class="section-wrap">
+				<div class="sub-contents end-contents">
+					<div class="procedure2"> 
+						<h3 class="s-m-title s-m-title2">Design procedures</h3>
+						<ul>
+							<li><img src="images/sub/capacity1.jpg" alt="" /></li>
+							<li><img src="images/sub/capacity2.jpg" alt="" /></li>
+						</ul>
+					</div><!-- /procedure -->	
+				</div><!-- /sub-contents -->
+			</div><!-- /section-wrap -->
+
+		</div><!-- /design -->
+	</div><!-- /s-section -->
+	
+</div>
+<!-- /section -->
+
+<!-- footer -->
+<footer id="footer">
+	<div class="ft-logo"><h3>NEXTPOWER</h3></div>
+	<div class="section-wrap">				
+		<div class="ft-menu">		
+			<ul>
+				<li><a href="#">Terms and Conditions</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Rejection of Unauthorized Collection of Emails</a></li>
+			</ul>
+		</div>
+		<div class="ft-info">
+			<ul>
+				<li><span>[ Headquarters ]</span> 321, 226, Cheomdangwagi-ro, Buk-gu, Gwangju, Republic of Korea</li>
+				<li><span>[ Research Institute ]</span> A-1303 Giheung ICT Valley, 259-1 Gugal-dong Giheung-gu Yongin-si, Gyeonggi-do</li>
+				<li><span>[ Business Registration Number ] 281-81-00888</span></li>
+				<li><span>[ E-MAIL ] kmax170307@gmail.com</span></li>
+				<li>The unauthorized collection of emails posted on the site is rejected.</li>
+			</ul>
+			<p>COPYRIGHTⓒ NEXTPOWER CO,. LTD. ALL RIGHTS RESERVED.</p>
+		</div>
+	</div><!-- /section-wrap -->	
+</footer>
+<!-- /footer -->
+
+</body>
+
+<script src="js/thema/common.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		new WOW().init();
+	});
+	
+</script>
+
+</html>

@@ -1,0 +1,411 @@
+@charset "utf-8";
+
+/*sub-top*/
+#sub-top{width:100%; height:480px; position:relative; overflow:hidden; transition:all 0.4s;}
+.sub-top1{background:url(../../images/sub/sub_top1.jpg)no-repeat;}
+.sub-top2{background:url(../../images/sub/sub_top2.jpg)no-repeat;}
+.sub-top3{background:url(../../images/sub/sub_top3.jpg)no-repeat;}
+.sub-top4{background:url(../../images/sub/sub_top4.jpg)no-repeat;}
+.sub-top5{background:url(../../images/sub/sub_top5.jpg)no-repeat;}
+.sub-top6{background:url(../../images/sub/sub_top6.jpg)no-repeat;}
+.sub-top7{background:url(../../images/sub/sub_top7.jpg)no-repeat;}
+.sub-top8{background:url(../../images/sub/sub_top8.jpg)no-repeat;}
+.sub-top9{background:url(../../images/sub/sub_top9.jpg)no-repeat;}
+
+.sub-top-bg{width:100%; height:100%; position:absolute; background-position:center; background-size:cover; -webkit-transform: translateZ(0) scale(1.1) rotate(0.1deg); transform: translateZ(0) scale(1.1) rotate(0.1deg); -webkit-transition:transform 10s; transition:transform 10s; -webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);}
+.bg-loaded{-webkit-transform: translateZ(0) scale(1) rotate(0deg); transform: translateZ(0) scale(1) rotate(0deg);}
+
+.s-top-title{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center; z-index:1; width:100%;padding:0 8%;box-sizing:border-box;}
+.s-top-title span{font-size:16px;color:#005fae;font-weight:400;width:19px;line-height:1;letter-spacing:0.2em;margin-bottom:4px;display:inline-block;width:100%;}
+.s-top-title h1{font-size:40px; color:#fff ;font-weight:500;line-height:1;}
+
+/*sub-nav*/
+#sub-nav{width:50%;margin-top:-65px;background:rgba(0,0,0,0.6); box-sizing:border-box; height:65px;position:relative;z-index:1;}
+#sub-nav > ul{display:block;width:100%;max-width:600px;min-width:600px;float:right;}
+#sub-nav > ul > li{float:left;width:100%;max-width:267px;position:relative;border-left:1px solid rgba(255,255,255,0.4); box-sizing:border-box;}
+#sub-nav > ul > li > a{font-weight:400;line-height:65px;padding:0 10px;box-sizing:border-box;font-size:16px;color:rgba(255,255,255,0.8);display:block;cursor:pointer;white-space:nowrap;word-break:normal;overflow:hidden;text-overflow:ellipsis;}
+
+#sub-nav .nav-home{width:66px;box-sizing:border-box;text-align:center;}
+#sub-nav .nav-home a i{line-height:65px;vertical-align:middle;color:rgba(255,255,255,0.8);text-align:center;padding:0;}
+#sub-nav .nav-home a i img{width:19px;}
+#sub-nav > ul > li:nth-of-type(3){border-right:1px solid rgba(255,255,255,0);}
+#sub-nav > ul > li:nth-of-type(2) > a, #sub-nav > ul > li:nth-of-type(3) > a{position:relative;padding:0 30px 0 20px;}
+#sub-nav > ul > li:nth-of-type(2) > a:before, #sub-nav > ul > li:nth-of-type(3) > a:before{content: "▼";color:rgba(255,255,255,0.8);position:absolute;font-size:10px;top:0;right:20px;transition:all 0.4s;}
+#sub-nav .nav-menu.nav-active > a:before{transform:rotate(180deg);}
+
+#sub-nav .nav-menu ul{display:none;position:absolute;z-index:777;background:#f8f8f8;border:1px solid #e6e6e6;border-top:0;width:100%;margin-left:-1px;padding:6px 0;}
+#sub-nav .nav-menu ul li a{font-size:15px;color:#555;line-height:40px;padding:0 20px;display:block;opacity:0.6;transition:all 0.4s;white-space:nowrap;word-break:normal;overflow:hidden;text-overflow:ellipsis;}
+#sub-nav .nav-menu ul li a:hover{opacity:0.9;}
+#sub-nav .nav-menu ul li.selected a{opacity:0.8; text-decoration:underline;}
+
+/* 공통 */
+#section{overflow:hidden;width:100%;}
+.s-section{padding-bottom:190px;box-sizing:border-box;}
+.section-wrap{width:100%; max-width:1200px; margin:0 auto;box-sizing:border-box;}
+.sub-contents{margin-bottom:50px;}
+.sub-contents.end-contents{margin-bottom:0px;}
+.s-title{padding:90px 0 110px;}
+.s-title h2{font-size:36px;font-weight:600;text-align:center;line-height:1;}
+
+.s-s-title{position:relative;padding-top:17px;margin-bottom:40px;}
+.s-s-title:before{position:absolute;content:'';background:url(../../images/sub/index.png)no-repeat;left:0px;top:0px;width:14px;height:9px;}
+.s-s-title h3{font-size:22px;font-weight:500;line-height:1;}
+
+.color-b{color:#005fae;}
+.color-3{color:#333;}
+.b400{font-weight:400;}
+.b500{font-weight:500;}
+.fadeInUp{animation-duration:1.3s;animation-delay:0.3s;}
+.w-block{display:block;}
+.wm-block{display:block;}
+.wxs-block{display:block;}
+
+/* 회사소개 */
+.company{position:relative;padding:200px 400px 0 0;}
+.company:before{position:absolute;top:0px;left:50%;transform:translateX(-50%);width:100%;height:100%;background:url(../../images/sub/company.jpg)no-repeat center center;background-size:cover;height:calc(100% - 575px);content:'';}
+.com-txt{background:#fff;padding:32px 130px 20px 40px;position:relative;}
+.com-txt h3{font-size:21px;line-height:1.6;margin-bottom:12px;}
+.com-txt h3 span{font-size:31px;line-height:1;}
+.com-txt p{line-height:1.7;margin-bottom:39px;}
+
+.c-table{overflow:auto;width:100%;}
+.c-table table{border-top:1px solid #4583c5;border-collapse:collapse;}
+.c-table table tr th, .c-table table tr td{border-bottom:1px solid #ededed;font-size:16px;line-height:1.6;padding:11px 20px 11px 25px;color:#444;font-weight:300;box-sizing:border-box;}
+.c-table table tr th{text-align:left;color:#fff;padding:11px 18px;background:linear-gradient(to right, #005fae, #00b4af);font-weight:400;}
+
+.c-table table tr:last-child th, .c-table table tr:last-child td{border-bottom:1px solid #888;}
+
+/* 대표이사소개 */
+.ceo .c-table table{background:linear-gradient(to right, #005fae, #00b4af);border-top:2px solid #005fae;}
+.ceo .c-table table tr th{text-align:center;padding:13px 20px;background:none;}
+.ceo .c-table table tr td{padding:12px 20px;background:#fff;}
+.ceo .c-table table tr td:first-child{text-align:center;}
+
+.tech-list li{position:relative;padding-left:9px;}
+.tech-list li:before{position:absolute;content:'';width:4px;height:1px;background:#444;left:0px;top:13px;}
+
+/* 조직도 */
+.org-list{position:relative;padding-bottom:18px;}
+.org-list.end-list{padding-bottom:0px;}
+.org-list:before{z-index:-1;position:absolute;content:'';background:url(../../images/sub/v_dot.gif)repeat-y;height:100%;width:1px;left:50%;top:0px;transform:translateX(-50%);}
+.org-list a{display:block;background:#fff;width:100%;max-width:800px;margin:0 auto;border-width:2px;border-style:solid;border-image:linear-gradient(to right, #005fae, #00b4af);border-image-slice:1;padding:58px 14% 56px;box-sizing:border-box;min-height:206px;}
+.org-list h3{font-size:23px;font-weight:500;line-height:1;padding:5px 0;text-align:center;}
+.bar{width:15px;height:2px;background:linear-gradient(to right, #005fae, #00b4af);display:block;margin:14px auto 16px;}
+.org-list p{text-align:center;line-height:1.6;}
+
+.org-list2 a{border:1px solid #005fae;padding:66px 14% 64px;}
+.org-list2 h3{font-size:18px;}
+
+/* 오시는길 */
+#tab-menu{margin-bottom:40px;text-align:center;}
+#tab-menu ul{overflow:hidden;display:inline-block;}
+#tab-menu ul li{float:left;width:185px;border:1px solid #ededed;box-sizing:border-box;margin-left:-1px;}
+#tab-menu ul li:first-child{margin-left:0px;}
+#tab-menu ul li a{display:block;padding:0 3%;cursor:pointer;font-size:16px;font-weight:300;line-height:40px;text-align:center;color:#999;}
+#tab-menu .tab-selected{position:relative;border-width:1px;border-style:solid;border-image:linear-gradient(to right, #005fae, #00b4af);border-image-slice:1;}
+#tab-menu .tab-selected a{color:#005fae;font-weight:500;}
+
+.map-img{line-height:0;}
+.map-img iframe{height:480px;width:100%;border:1px solid #ccc !important;box-sizing:border-box;}
+.map-info{border:1px solid #ccc;margin-top:-1px;}
+.map-info ul{width:100%;overflow:hidden;padding:26px 22px;box-sizing:border-box;}
+.map-info ul li{float:left;position:relative;font-size:28px;line-height:1.3;font-weight:400;color:#555;padding:0 2.5% 0 50px;box-sizing:border-box;}
+.map-info ul li span{position:absolute;font-size:20px;font-weight:200;color:#005fae;left:8px;top:8px;}
+.map-info ul li:first-child{width:58.33333333%;}
+.map-info ul li:last-child{width:41.67%;word-break:break-all;}
+
+.trans{width:100%;padding:35px 4% 4px;box-sizing:border-box;background:linear-gradient(to right, #005fae, #00b4af)repeat-x;background-size:100% 1px;border-bottom:1px solid #ccc !important;}
+.s-m-title{font-size:18px;font-weight:500;color:#005fae;line-height:1;position:relative;padding-left:20px;margin-bottom:11px;}
+.s-m-title:before{position:absolute;content:'';background:url(../../images/sub/index2.png)no-repeat;width:7px;height:7px;left:0px;top:3px;}
+.trans-info{width:100%;overflow:hidden;padding-bottom:12px;}
+.trans-icon{width:12.5%;float:left;padding:18px 10px;box-sizing:border-box;text-align:center;line-height:0;}
+.trans-txt{width:87.5%;float:left;padding:0 18px;box-sizing:border-box;}
+.trans-txt ul{padding-top:20px;}
+.trans-txt ul h4{font-size:16px;color:#555;font-weight:500;line-height:1.4;}
+.trans-txt ul li{font-size:16px;color:#555;font-weight:300;line-height:1.7;}
+.trans-txt2 ul{padding-top:30.5px;}
+.trans-txt2 ul li{position:relative;padding-left:11px;}
+.trans-txt2 ul li:before{position:absolute;content:'';width:5px;height:2px;background:#555;left:0px;top:13px;}
+
+/* 제품 공통 */
+.product-info{overflow:hidden;margin-bottom:85px;}
+.product-img{width:100%;line-height:0;}
+.product-img img{width:100%;}
+.product-txt{padding:48px 62px 0 62px;}
+.product-txt p{font-size:18px;line-height:1.6;color:#444;}
+
+/* 태양광인버터 */
+.feature-list{transition-duration:0.4s;margin:7.5px auto;border:1px solid #ccc;border-radius:10px;width:97.5%;min-height:270px;padding:18px 0 0;box-sizing:border-box;text-align:center;}
+.feature-list.left{float:left;}
+.feature-list.right{float:right;}
+.feature-list:hover{border:1px solid #005fae;}
+.feature-list img{margin-bottom:7px;}
+.feature-list h4{font-size:18px;font-weight:600;color:#005fae;line-height:1.4;margin-bottom:13px;padding:0 10%;letter-spacing:-0.02em}
+.feature-list p{letter-spacing:-0.02em;border-radius:0 0 10px 10px;width:100%;min-height:111px;background:#f8f8f8;color:#444;line-height:1.6;padding:25px 6% 35px;box-sizing:border-box;}
+
+.p-list-box{padding-top:25px;}
+.product-list{margin-bottom:50px;position:relative;min-height:578px;}
+.p-list-box li:nth-of-type(3).product-list{margin-bottom:0;}
+.p1-img{width:50%;position:absolute;left:0px;top:0px;}
+.p1-img img{border:1px solid #ccc;width:96%;transition-duration:0.4s;overflow:hidden;}
+.p1-img img:hover{box-shadow:0px 5px 15px rgba(0,0,0,0.1)}
+
+.function-txt{width:100%;max-width:700px;box-sizing:border-box;background:#f2f4f8;display:inline-block;position:absolute;right:0;top:50%;transform:translateY(-50%);padding:70px 70px 57px 100px;min-height:279px; }
+.p-title .s-m-title{font-size:24px;color:#333;letter-spacing:-0.03em;line-height:1.2;}
+.p-title .s-m-title:before{top:5px;}
+.function-txt ul{padding-left:18px;}
+.function-txt ul li{font-size:17px;line-height:1.6;position:relative;color:#555;font-weight:400;padding:2.5px 0 2.5px 15px;}
+.function-txt ul li:before{position:absolute;content:'';width:5px;height:2px;left:0;background:#555;top:18px;}
+
+.product-list.reverse .function-txt{left:0;right:auto;}
+.product-list.reverse .p1-img{left:auto;right:0;}
+.product-list .p1-img.border-none img{border:0;}
+
+/* ESS시스템 */
+.contents-bg{padding:50px 0;background:#f8f8f8;width:100%;}
+.s-m-title2{color:#333;padding-left:18px;}
+.s-m-title2::before{top:7px;}
+.procedure, .procedure2{padding:0 17px;width:100%;box-sizing:border-box;}
+
+.procedure ul{text-align:center;width:100%;overflow:hidden;padding:47px 0 30px;box-sizing:border-box;}
+.procedure ul li{background:rgba(255,255,255,0.6);border-radius:50%;-webkit-mask-image: -webkit-radial-gradient(white, black);margin:-22px;height:265px;width:265px;padding:46px;box-sizing:border-box;display:inline-table;position:relative;}
+.procedure ul li:nth-of-type(even){background:rgba(0, 95, 174, 0.05);}
+.procedure ul li:last-child{border:1px solid rgba(0, 95, 174, 0.6);}
+.design-txt{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);width:61%;}
+.design-txt span{font-size:14px;font-weight:500;color:#005fae;line-height:1;margin-bottom:8px;}
+.design-txt p{color:#005fae;font-weight:500;line-height:1.5;letter-spacing:-0.02em;}
+
+/* artworks */
+.procedure2 ul{overflow:hidden;padding:19px 0 0 0 ;}
+.procedure2 ul li{float:left;width:50%;position:relative;line-height:0;}
+.procedure2 ul li:first-child:before{content:"\e930";position:absolute;right:-9px;top:50%;transform:rotate(90deg) translateY(-50%);color:#555;font-size:17px;font-family:'xeicon';}
+.procedure2 ul li img{width:98%;border:1px solid #005fae;}
+.procedure2 ul li:last-child img{float:right;}
+
+#tab-menu.tab-menu2 ul li{width:160px;}
+#pcb{font-size:22px;font-weight:300;line-height:1.5;text-align:center;padding:0 3%;box-sizing:border-box;margin-bottom:55px;}
+.pcb-list{display:none;}
+.product .tab-selected{display:inherit;}
+.pcb-list .product-info{margin-bottom:50px;}
+.pcb-list .procedure ul{padding:0 26.5px 30px;text-align:inherit;}
+.pcb-list .procedure ul li{position:relative;margin:12.5px -2px;width:268px;height:65px;color:#005fae;font-weight:500;line-height:1.2;letter-spacing:-0.02em;border-radius:7px;padding:10px 20px;}
+.pcb-list .procedure ul li:before{position:absolute;content:'';background:url(../../images/sub/half_circle.png)no-repeat;left:100%;top:50%;transform:translateY(-50%);width:8px;height:15px;z-index:1;}
+.pcb-list .procedure ul li:nth-of-type(even):before{background:url(../../images/sub/half_circle2.png)no-repeat;}
+.pcb-list .procedure ul li:last-child:before{background:none;}
+.pcb-list .procedure ul li:nth-of-type(6):before{background:url(../../images/sub/half_circle3.png)no-repeat;}
+.pcb-list .design-txt{text-align:center;width:85%;}
+.pcb-list .design-txt span{margin-right:10px;}
+
+.pcb-photo{overflow:hidden;width:100%;padding:0 10px;box-sizing:border-box;}
+.pcb-photo li{width:33.33%;float:left;text-align:center;line-height:0;}
+.pcb-photo li img{width:92.5%;transition-duration:0.4s;overflow:hidden;}
+.pcb-photo li img:hover{box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+.pcb-photo li.left img{float:left;}
+.pcb-photo li.right img{float:right;}
+
+/* smt */
+.contents-bg2{height:570px;width:100%;position:relative;background:url(../../images/sub/smt_bg.jpg)no-repeat center center;background-attachment:fixed;}
+.smt-txt{position:absolute;transform:translateY(-50%);top:50%;right:18.75%;}
+.smt-txt h3{font-size:45px;font-weight:300;color:rgba(255,255,255,0.9);line-height:1.2;text-align:right;letter-spacing:-0.04em;}
+.smt-txt h3 span{display:block;font-size:60px;font-weight:500;letter-spacing:0;}
+
+/* 제품리스트 */
+.search-wrap ul li{width:25%; float:left; box-sizing:border-box;}
+.search-wrap ul{overflow:hidden;}
+.s-p-box{width:98%; max-width:294px;margin:2% 1%;border:1px solid #ddd; box-sizing:border-box; background:#fff;transition-duration:0.4s;}
+.s-p-box:hover{border-width:1px;border-style:solid;border-image:linear-gradient(to right, #005fae, #00b4af);border-image-slice:1;}
+.s-p-img{width:100%; min-height:300px; background-size:cover !important; background-position:center center !important;}
+.s-p-box .desc{ text-align:center; padding:19px 20px 27px; background:#fff; box-sizing:border-box;}
+.s-p-box .tt{ font-size:18px; font-weight:500; color:#333; line-height:1.2; overflow:hidden; text-overflow:ellipsis; height:43.2px;word-wrap:break-word;-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;}
+
+.no-search-box{width:100%;background:#f0f0f0;height:450px;display:flex;align-items:center;justify-content:center;}
+
+@media all and (max-width:1199px){
+	.section-wrap{padding:0 3%;}
+	.section-wrap.section-wrap2{padding:0;}
+	.wm-block{display:inline-block;}
+	
+	#sub-nav{width:100%;max-width:600px;}
+	#sub-nav > ul{float:none;}
+	
+	.company{padding:200px 17% 0 0;}
+	.company::before{height:calc(100% - 475px);}
+	.com-txt{padding:32px 100px 20px 40px;}
+	
+	.map-info ul li{width:100% !important;padding:0 0 0 50px;}
+	.trans{padding:35px 4% 23px}
+	.trans-icon{width:100%;text-align:left;}
+	.trans-txt{width:100%;}
+	.trans-txt ul{padding:12px 0;}
+	
+	.product-txt{padding:7% 0 7% 7%;}
+	.p1-img{position:static;margin:0 auto;text-align:center;}
+	.function-txt{position:static;transform:none;margin:28px auto 0;display:table;padding:70px 70px 57px}
+	
+	.pcb-list .procedure ul li{width:30%;}
+	.smt-txt{right:0;padding:0 3%;box-sizing:border-box;}
+	
+}
+
+@media all and (max-width:767px){
+	.s-section{padding-bottom:170px;}
+	.sub-contents{margin-bottom:40px;}
+	
+	#sub-top{height:380px;}
+	.s-top-title h1{font-size:36px;}
+	.s-top-title span{font-size:13px;}
+	
+	#sub-nav{height:55px;margin-top:-55px;max-width:none;}
+	#sub-nav > ul{max-width:none;min-width:auto;}
+	#sub-nav > ul > li{max-width:none;border:none !important;}
+	#sub-nav > ul > li > a{line-height:55px;font-size:15px;}
+	
+	.s-title{padding:70px 8% 90px;}
+	.s-title h2{font-size:33px;}
+	
+	.s-s-title{padding-top:14px;margin-bottom:28px;}
+	.s-s-title h3{font-size:19px;}
+	
+	.company{padding:160px 8% 0 0;}
+	.com-txt{padding:32px 8% 20px 4%;}
+	.com-txt h3{font-size:19px;margin-bottom:7px;}
+	.com-txt h3 span{font-size:28px;}
+	.com-txt p{font-size:15px;line-height:1.6;margin-bottom:30px;}
+	.c-table table tr th, .c-table table tr td{font-size:15px;line-height:1.5;padding:8px 20px 8px 25px;}
+	.c-table table tr th{padding:8px 18px 8px 18px;}
+	
+	.ceo .c-table{overflow:auto;}
+	.ceo .c-table table{min-width:767px;}
+	.ceo .c-table table tr th{padding:10px 20px;}
+	.ceo .c-table table tr td{padding:8px 15px;}
+	.tech-list li::before{top:10.5px;}
+	
+	.org-list a{padding:48px 9% 46px;}
+	.org-list2 a{padding:56px 9% 54px;}
+	.org-list h3{font-size:21px;}
+	.org-list2 h3{font-size:17px;}
+	.org-list p{font-size:15px;line-height:1.4;}
+	.bar{margin:10px auto 11px;}
+	
+	#tab-menu{margin-bottom:30px;}
+	#tab-menu ul li{width:170px;}
+	#tab-menu ul li a{font-size:15px;line-height:35px;}
+	
+	.map-img iframe{height:400px;}
+	.map-info ul{padding:23px 4%;}
+	.map-info ul li{font-size:25px;padding:3px 0 3px 29px}
+	.map-info ul li span{font-size:17px;top:10px;left:0px;}
+	.trans{padding:30px 4% 18px;}
+	.s-m-title{font-size:16px;padding-left:11px;margin-bottom:10px;}
+	.s-m-title::before{background-size:contain;width:6px;height:6px;}
+	.trans-icon{padding:12px 10px;}
+	.trans-txt{padding:0;}
+	.trans-txt ul h4{margin-bottom:3px;}
+	.trans-txt ul li{font-size:15px;line-height:1.5;}
+	
+	.product-info{margin-bottom:40px;}
+	.product-txt{padding:6% 4%;}
+	.product-txt p{text-align:justify;letter-spacing:-0.02em;}
+	.feature-list.left, .feature-list.right{float:none;}
+	.product-list{margin-bottom:40px;min-height:inherit;}
+	.p-list-box{padding-top:10px;}
+	.p1-img{width:100%;}
+	.p1-img img{width:89%;}
+	.function-txt{padding:50px 55px 37px;min-height:230px;}
+	.p-title .s-m-title{font-size:21px;}
+	.function-txt ul li{font-size:15px;padding:2px 0 2px 12px;line-height:1.4;}
+	.function-txt ul li::before{width:4px;top:13.5px;}
+	.contents-bg{padding:40px 0;}
+	.procedure2 ul li{width:100%;text-align:center;}
+	.procedure2 ul li:first-child{margin-bottom:25px;}
+	.procedure2 ul li:first-child::before{top:auto;bottom:-12px;right:auto;left:50%;transform:rotate(180deg);}
+	.procedure2 ul li img{width:92%;}
+	.procedure2 ul li:last-child img{float:none;}
+	
+	#pcb{font-size:20px;line-height:1.4;margin-bottom:38px;}
+	.procedure, .procedure2{padding:0;}
+	.pcb-list .procedure ul li{width:50%;margin:6px -2px;}
+	.pcb-photo{padding:0;}
+	.pcb-photo li{width:50%;margin:5px 0;}
+	.pcb-photo li img{width:95%;}
+	.pcb-photo li.left img, .pcb-photo li.right img{float:none;}
+	.contents-bg2{height:480px;}
+	.smt-txt h3{font-size:31px;}
+	.smt-txt h3 span{font-size:40px;}
+	
+	.search-wrap ul li{width:50%;}
+	.s-p-box{max-width:100%;}
+}
+
+@media all and (max-width:525px){	
+	.s-section{padding-bottom:150px;}
+	.wxs-block{display:inline-block;}
+	#sub-top{height:350px;}
+	.s-top-title h1{font-size:31px;}
+	.s-title{padding:60px 8% 75px;box-sizing:border-box;}
+	.s-title h2{font-size:31px;}
+	
+	.s-s-title{padding-top:12px;}
+	.s-s-title::before{background-size:contain;width:11px;}
+	.s-s-title h3{font-size:18px;}
+	
+	.company{padding:125px 8% 0 0;}
+	.company::before{height:calc(100% - 775px);}
+	.com-txt{padding:28px 7% 20px 4%;}
+	.com-txt h3{font-size:17px;line-height:1.5;margin-bottom:5px;}
+	.com-txt h3 span{font-size:24px;}
+	.com-txt p{line-height:1.4;margin-bottom:20px;}
+	.c-table table tr th, .c-table table tr td{line-height:1.4;}
+	.c-table2 table tr th, .c-table2 table tr td{width:100%;display:block;}
+	
+	#tab-menu ul li{width:160px;}
+	#tab-menu ul li a{font-size:14px;}
+	
+	.map-img iframe{height:365px;}
+	.map-info ul li{font-size:22px;padding:3px 0 3px 25px;}
+	.map-info ul li span{font-size:15px;top:9px;}
+	.trans{padding:23px 3% 15px;}
+	.trans-txt ul{padding:5px 0;}
+	
+	.product-info{margin-bottom:25px;}
+	.product-txt{padding:5% 4%;}
+	.product-txt p{font-size:17px;line-height:1.5;}
+	.feature-list{min-height:250px;}
+	.feature-list h4{font-size:17px;margin-bottom:10px;}
+	.feature-list p{padding:20px 6% 28px;}
+	.function-txt{margin:18px auto 0;padding:32px 6% 27px;}
+	.p-title .s-m-title{font-size:19px;}
+	.procedure2 ul li img{width:96%;}
+	
+	#pcb{font-size:19px;letter-spacing:-0.02em;margin-bottom:28px;}
+	.pcb-list .procedure ul li{width:100%;}
+	.pcb-list .procedure ul li::before{top:100%;transform:rotate(90deg) translateX(-50%);left:50%;}
+	.pcb-photo li{width:100%;}
+	.contents-bg2{height:380px;}
+	.smt-txt h3{font-size:23px;}
+	.smt-txt h3 span{font-size:31px;}
+	
+	.search-wrap ul li{width:100%;}
+	.s-p-img{min-height:340px;}
+	
+}
+
+@media all and (max-width:360px){
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

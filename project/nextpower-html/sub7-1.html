@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- 포탈사이트 검색등록 -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!-- robots read -->
+<meta name="robots" content="index,follow" /><!-- 이 문서도 긁어가고 링크된 문서도 긁어감. -->
+<!-- 
+<meta name="robots" content="noindex,follow" /> 이 문서는 긁어가지 말고 링크된 문서만 긁어감.
+<meta name="robots" content="index,nofollow" /> 이 문서는 긁어가되, 링크는 무시함.  
+<meta name="robots" content="noindex,nofollow" /> 이 문서도 긁지 않고, 링크도 무시함.
+-->
+<!-- 오픈그래프 설정 -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<meta property="og:url" content="" />
+
+<!-- 파비콘 설정 -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+<title>NEXTPOWER</title>
+
+<link rel="stylesheet" href="css/plugins/animate.css" type="text/css" />
+
+<link rel="stylesheet" href="css/thema/basic.css" type="text/css" />
+<link rel="stylesheet" href="css/thema/common.css" type="text/css" />
+<link rel="stylesheet" href="css/thema/sub.css" type="text/css" />
+
+<script src="js/plugins/jquery-3.3.1.min.js"></script>
+<script src="js/plugins/wow.min.js"></script>
+</head>
+
+<body>
+<!-- header -->
+<header>
+	<div id="header">
+		<!-- top-header -->
+		<div class="top-header">
+			<div class="inner">
+				<div class="logo"><a href="index.html" title="메인으로 이동">
+					<img src="images/main/logo.png" alt="(주)넥스트파워" class="logo"></a>
+				</div>
+				<div class="big-search-wrap">
+					<form id="formTotalSearch" method="get">	
+						<div class="big-search-bar">
+							<input type="text" id="productSearchStr" name="productSearchStr" class="search-product" onkeypress="board_search_enter(document.keyword);" value="" placeholder="SEARCH">
+							<button type="button" id="product_search_btn"><i><img src="images/main/glasses.png" alt="돋보기아이콘" /></i></button>
+						</div>
+					</form>
+					<script>
+					
+						$(document).ready(function() {
+							$("#product_search_btn").click(function() {
+								if ($("#productSearchStr").val() == '') {
+									alert("검색어를 입력하세요!");
+									return false;
+								}else {
+									//var act = "/search";
+									var act = "/sub7-1.html";
+									$("#formTotalSearch").attr('action', act).submit();
+									//alert(act);
+								}
+							});
+						});
+
+					</script>
+				</div><!-- /big-search-wrap -->
+			</div><!-- /inner -->
+			
+			<div class="h-inquiry">
+				<a href="#" class="btn-inquiry"><span><img src="images/main/inquiry-icon.png">INQUIRY</span></a>
+			</div><!-- /h-inquiry -->
+		</div>
+		<!-- /top-header -->
+		
+		<!-- bottom-header -->
+		<div class="bottom-header">
+			<div class="menu hidden-lg m-menu">
+				<ul>
+					<li><a>ABOUT</a>
+						<ul class="sub-menu">
+							<li><a href="sub1-1.html">About</a></li>
+							<li><a href="sub1-2.html">Ceo</a></li>
+							<li><a href="sub1-3.html">Organization</a></li>
+							<li><a style="opacity:0.3">Patent & Certification</a></li>
+							<li><a href="sub1-5.html">Directions</a></li>
+						</ul>
+					</li>
+					<li><a href="sub2-1.html">PHOTOVOLTAIC <span class="wm-block"></span>INVERTER</a></li>
+					<li><a href="sub3-1.html">ESS SYSTEM</a></li>
+					<li><a href="sub4-1.html">PCB</a></li>
+					<li><a href="sub5-1.html">ELECTRIC POWER <span class="wm-block"></span>CONVERTING DEVICES</a></li>
+					<li><a>CUSTOMER</a>
+						<ul class="sub-menu">
+							<li><a style="opacity:0.3">Notice</a></li>
+							<li><a style="opacity:0.3">Inquiry</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /menu -->
+			
+			<div class="ham visible-lg">
+				<a class="open"><i class="xi-bars"></i></a>
+				<a class="close"><i class="xi-close"></i></a>
+			</div><!-- /ham -->
+		</div>
+		<!-- /bottom-header -->
+	</div><!-- /#header -->
+</header>
+<!-- /header -->
+
+<!-- sub-top -->
+<div id="sub-top">
+	<div class="sub-top9 sub-top-bg"></div> 
+	<div class="s-top-title">	
+		<span>NEXTPOWER</span>	
+		<h1>PRODUCTS</h1>
+	</div>
+</div>
+<!-- /sub-top -->
+
+<!-- section -->
+<div id="section">
+	
+	<div id="sub6-2" class="s-section">
+		<div class="s-title"><h2>Products</h2></div>
+		
+		<div class="section-wrap">
+		
+			<!-- 검색결과가 없는 경우 -->
+			<div class="no-search-wrap">
+				<div class="no-search-box" style="display:none;">
+					<img src="images/product/no-image.png" alt="" />
+				</div>		
+			</div>
+			<!-- /검색결과가 없는 경우 -->
+			
+			<!-- 검색결과 있는 경우 -->
+			<div class="search-wrap">
+				<ul>
+					<li>
+						<div class="s-p-box">
+							<a href="sub2-1.html">
+								<div class="s-p-img" style="background:url(images/sub/s-p-1.jpg)"no-repeat 50% 50%"></div>
+														
+								 <div class="desc">
+	                                  <div class="tt">Photovoltaic inverter wall-mounting type 10kW</div>
+	                            </div>
+							</a>
+						</div>
+					</li><!--  -->
+						<li>
+						<div class="s-p-box">
+							<a href="sub2-1.html">
+								<div class="s-p-img" style="background:url(images/sub/s-p-1.jpg)"no-repeat 50% 50%"></div>
+														
+								 <div class="desc">
+	                                  <div class="tt">Photovoltaic inverter wall-mounting type 30k</div>
+	                            </div>
+							</a>
+						</div>
+					</li><!--  -->
+						<li>
+						<div class="s-p-box">
+							<a href="sub2-1.html">
+								<div class="s-p-img" style="background:url(images/sub/s-p-1.jpg)"no-repeat 50% 50%"></div>
+														
+								 <div class="desc">
+	                                  <div class="tt">Photovoltaic Inverter wall-mounting type 50kW</div>
+	                            </div>
+							</a>
+						</div>
+					</li><!--  -->
+					<li>
+						<div class="s-p-box">
+							<a href="sub2-1.html">
+								<div class="s-p-img" style="background:url(images/sub/s-p-1.jpg)"no-repeat 50% 50%"></div>
+														
+								 <div class="desc">
+	                                  <div class="tt">Photovoltaic inverter wall-mounting type 100kW</div>
+	                            </div>
+							</a>
+						</div>
+					</li><!--  -->
+				</ul>
+			</div><!-- /search-wrap -->
+			<!-- /검색결과 있는 경우 -->
+			
+		</div><!-- /section-wrap -->
+	</div><!-- /s-section -->
+	
+</div>
+<!-- /section -->
+
+<!-- footer -->
+<footer id="footer">
+	<div class="ft-logo"><h3>NEXTPOWER</h3></div>
+	<div class="section-wrap">				
+		<div class="ft-menu">		
+			<ul>
+				<li><a href="#">Terms and Conditions</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Rejection of Unauthorized Collection of Emails</a></li>
+			</ul>
+		</div>
+		<div class="ft-info">
+			<ul>
+				<li><span>[ Headquarters ]</span> 321, 226, Cheomdangwagi-ro, Buk-gu, Gwangju, Republic of Korea</li>
+				<li><span>[ Research Institute ]</span> A-1303 Giheung ICT Valley, 259-1 Gugal-dong Giheung-gu Yongin-si, Gyeonggi-do</li>
+				<li><span>[ Business Registration Number ] 281-81-00888</span></li>
+				<li><span>[ E-MAIL ] kmax170307@gmail.com</span></li>
+				<li>The unauthorized collection of emails posted on the site is rejected.</li>
+			</ul>
+			<p>COPYRIGHTⓒ NEXTPOWER CO,. LTD. ALL RIGHTS RESERVED.</p>
+		</div>
+	</div><!-- /section-wrap -->	
+</footer>
+<!-- /footer -->
+
+</body>
+
+<script src="js/thema/common.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		new WOW().init();
+	});
+		
+</script>
+
+</html>

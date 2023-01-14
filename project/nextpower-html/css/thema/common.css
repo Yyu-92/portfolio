@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+#header{width:100%;box-sizing:border-box;transition:all 0.4s;}
+.top-header{border-bottom:1px solid #dfe7e8;height:100px;}
+.inner{width:100%;max-width:1200px;margin:0 auto;overflow:hidden;height:100%;}
+.logo{width:50%;float:left;position:relative;height:100%;}
+.logo a{display:block;position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.logo img{display:inline-block;width:100%;}
+.big-search-wrap{width:50%;float:right;position:relative;height:100%;line-height:0;}
+.big-search-wrap .big-search-bar{position:absolute;right:0;top:50%;transform:translateY(-50%);display:inline-block;width:100%;max-width:400px;height:50px;border:1px solid #dfe7e8;background:#fff;box-sizing:border-box;overflow:hidden; }
+.big-search-wrap .big-search-bar input{font-size:13px;width:100%;height:100%;color:#666;/*min-width:360px;  max-width:358px; */padding:0 20px;box-sizing:border-box;border:0;outline:none;float:left;line-height:50px;}
+.big-search-wrap .big-search-bar button{width:50px;height:100%;border:0;outline:none; float:right; color:#005fae;/*  line-height:26px; */cursor:pointer;font-size:23px;position:absolute;right:0;border-left:1px solid #dfe7e8;}
+#product_search_btn i img{width:20px;}
+
+.bottom-header{height:60px;}
+.menu > ul{display:table;margin:0 auto;}
+.menu > ul > li{position:relative;float:left;}
+.menu > ul > li > a{text-align:center;font-size:17px;cursor:pointer;color:#333;line-height:19px;padding:11px 40px;box-sizing:border-box;display:block;font-weight:400;transition:all 0.4s;}
+.menu > ul > li:first-child > a, .menu > ul > li:nth-of-type(3) > a, .menu > ul > li:nth-of-type(4) > a, .menu > ul > li:last-child > a{padding:20.5px 40px;}
+
+.sub-menu{display:none;opacity:0;position:absolute;z-index:9999;background:#005fae;width:190px;padding:10px 0;transition:all 0.4s;top:100%;left:50%;transform:translateX(-50%);}
+.sub-menu li{padding:7px 12px;box-sizing:border-box;text-align:left;}
+.sub-menu li a{font-size:15px;color:#fff;font-weight:400;display:block;transition:all 0.3s;opacity:0.8;}
+.sub-menu li a:hover{opacity:1;text-decoration:underline;}
+.wm-block{display:block;}
+
+/*scroll-menu*/
+.scroll-menu{box-shadow:1px 1px 5px #999;position:fixed !important;z-index:999 !important;}
+.scroll-menu .top-header{display:none;}
+.scroll-menu .bottom-header{background:#005fae;}
+.scroll-menu .menu > ul > li > a{color:#fff;}
+.scroll-menu .ham a{color:#fff;}
+
+#header .h-inquiry{position:absolute;right:0px;top:0px;height:100vh;overflow:hidden;}
+#header .btn-inquiry{width:100px;height:100px;background:linear-gradient(to right, #005fae, #00b4af );display:block;position:relative;}
+#header .btn-inquiry span{display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);font-size:14px;color:#fff;opacity:0.8;}
+#header .btn-inquiry img{display:block;margin:0 auto 10px;}
+
+.ham{line-height:0;position:absolute;right:3%;top:50%;transform:translateY(-50%);line-height:0;z-index:999;}
+.ham a{font-size:29px; cursor:pointer; color:#333}
+.close{display:none;color:#fff !important;font-size:25px !important;}
+
+#footer{width:100%; padding:60px 50px; box-sizing:border-box; overflow:hidden; background:#3c434a; position:relative;}
+#footer .ft-logo{position:absolute; left:50px; top:60px;}
+#footer .ft-logo h3{font-size:22px; font-weight:400; color:#fff;}
+#footer .ft-info {float:left;}
+#footer .ft-info ul{display:block; margin-bottom:40px; overflow:hidden;}
+#footer .ft-info ul li, #footer .ft-info p{font-size:14px; color:#fff; opacity:0.6; line-height:26px;}
+#footer .ft-info ul li:nth-child(3){float:left; margin-right:30px;}
+#footer .ft-info ul li span{padding-right:10px;}
+
+#footer .ft-menu{float:right; width:33.33%;}
+#footer .ft-menu ul li{/* float:left; */ margin-left:10px; float:right; margin-bottom:10px;}
+#footer .ft-menu ul li a{font-size:14px; color:rgba(255,255,255,0.6); border:1px solid rgba(255,255,255,0.3); border-radius:5px; box-sizing:border-box; padding:8px 20px; transition:all 0.4s; display:block;}
+#footer .ft-menu ul li a:hover{background:rgba(255,255,255,0.8); color:#666;}
+
+@media all and (max-width:1403px){
+	.h-inquiry {display:none;}
+}
+
+@media all and (max-width:1199px){
+	.top-header{height:70px;}
+	.logo a{left:3%;}
+	.logo img{max-width:83%;}
+	.big-search-wrap .big-search-bar{right:3%;max-width:280px;height:40px;}
+	.big-search-wrap .big-search-bar input{line-height:40px;}
+	.big-search-wrap .big-search-bar button{width:40px;}
+	
+	.bottom-header{position:relative;}
+	.m-menu{width:100%; max-width:1200px; display:block; height:100%; background:#005fae; position:fixed; z-index:990; right:-100%; padding-top:60px; box-sizing:border-box; transition:all 0.4s;/* overflow-y:scroll; */}	
+	.m-menu > ul > li{width:100%; margin:0 !important; border-top:1px solid rgba(255,255,255,0.2); text-align:left !important;}
+	.m-menu > ul > li > a{padding:20px 45px !important; opacity:0.8;color:#fff;font-size:18px;line-height:1;text-align:left;}
+	.sub-menu{width:100%;transform:none;background:rgba(0,0,0,0.1); position:static; border-top:1px solid rgba(255,255,255,0.2);opacity:1;}
+    .sub-menu li{padding:7px 0;}
+    .sub-menu li a{font-size:17px;padding:6px 40px;}
+	.wm-block{display:inline-block;}
+	
+	#footer .section-wrap{padding:0;}
+	#footer .ft-logo{position:static; margin-bottom:15px;}
+	#footer .ft-menu{width:100%; float:none; margin:10px 0 0; overflow:hidden;}
+	#footer .ft-menu ul li{float:left; margin-left:0; margin-right:10px;}
+	#footer .ft-menu ul li:last-child{margin-right:0px;}
+}
+
+@media all and (max-width:767px){
+	.top-header{height:65px;}
+	.logo img{max-width:65%;}
+	.big-search-wrap .big-search-bar input{font-size:14px;}
+	.bottom-header{height:50px;}
+	
+	#footer{padding:35px 3%;}
+	#footer .ft-menu ul li{margin-right:7px;}
+	#footer .ft-menu ul li a{font-size:13px;padding:6px 10px;}
+	#footer .ft-info ul li, #footer .ft-info p{font-size:13px;line-height:22px;}
+	#footer .ft-info ul{margin-bottom:25px;}
+	#footer .ft-info ul li:nth-child(3){float:none;}
+}
+
+@media all and (max-width:525px){
+	.top-header{height:101px;}
+	.logo, .big-search-wrap{width:100%;height:auto;}
+	.logo a{position:static;transform:inherit;text-align:center;margin:17px 0 13px;}
+	.logo img{float:none;max-width:45%;min-width:218px;}
+	.big-search-wrap .big-search-bar{position:static;transform:translateY(0px);max-width:100%;}
+}
+
+@media all and (max-width:360px){
+	
+}
