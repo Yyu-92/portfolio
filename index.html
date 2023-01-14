@@ -9,7 +9,7 @@
 	<title>YUJIN-PORTFOLIO</title>
 	
 	<!-- <link rel="stylesheet" href="css/plugins/jquery.fullpage.css" type="text/css" /> -->
-	<link rel="stylesheet" href="css/plugins/fullpage.css" type="text/css" />
+	<link rel="stylesheet" href="css/plugins/jquery.fullpage.css" type="text/css" />
 	<link rel="stylesheet" href="css/plugins/animate.css" type="text/css" />
 	
 	<link rel="stylesheet" href="css/plugins/slick.css" type="text/css" />
@@ -19,8 +19,8 @@
 	<link rel="stylesheet" href="css/thema/main.css" type="text/css" />
 	
 	<script src="js/plugins/jquery-3.3.1.min.js"></script>
-	<!-- <script src="js/plugins/jquery.fullpage.min.js"></script> -->
-	<script src="js/plugins/fullpage.js"></script>
+	<script src="js/plugins/jquery.fullpage.min.js"></script>
+	<!-- <script src="js/plugins/fullpage.js"></script> -->
 
 	<script src="js/plugins/slick.min.js"></script>
 	<script src="js/plugins/wow.min.js"></script>
@@ -312,119 +312,92 @@
 
 <script type="text/javascript">
 	
-	let fullPage = null;
+	$('#fullpage').fullpage({
+		anchors: ['1', '2', '3', '4', '5'],
+		navigation: true,
+		navigationPosition: 'left',
+		navigationTooltips: false,
+		responsiveWidth: 767,
+		onLeave : function(){	
+			new WOW().init();
 	
-	function setFullpage(){
-		fullPage = new fullpage('#fullpage',{
-				licenseKey:'61736A85-D1F34F84-A7DB4685-898A4841',
-				anchors: ['1', '2', '3', '4','5'],
-				navigation: true,
-				navigationPosition: 'left',
-				navigationTooltips: false,
-				responsiveWidth: 767,
-				afterLoad: function(){
-					$('.fadeInUp').css({'visibility' : 'visible','animation-name' : 'fadeInUp'});
-				},
-				afterRender: function(){
-					new WOW().init();
-
-					$('#project-slick1').slick({
-					infinite: true,
-					arrows: false,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					autoplay: true,
-					speed: 30000,
-					autoplaySpeed: 0,
-					vertical: true
-				});
-
-				$('#project-slick2').slick({
-					infinite: true,
-					arrows: false,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					autoplay: true,
-					speed: 30000,
-					autoplaySpeed: 0,
-					vertical: true
-				});
-
-				$('#project-slick3').slick({
-					infinite: true,
-					slidesToShow: 2,
-					slidesToScroll: 1,
-					autoplay: true,
-					speed: 3000,
-					responsive: [
-						{
-							breakpoint: 767,
-							settings: {
-								slidesToShow: 1
-							}
-						},
-						{
-							breakpoint: 578,
-							settings: {
-								slidesToShow: 1,
-							}
-						}
-						
-					]
-				});
-
-				$('.code-slick').slick({
-					infinite: true,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					autoplay: true,
-					speed: 1000,
- 					centerMode: true,
-					arrows: false,
-					responsive: [
-						{
-							breakpoint: 767,
-							settings: {
-								slidesToShow: 2
-							}
-						},
-						{
-							breakpoint: 578,
-							settings: {
-								slidesToShow: 1,
-							}
-						}
-						
-					]
-				});
-				},
-				onLeave : function(){
-					new WOW().init();
-					
-					// FOOTER
-					// if( nextIndex == 5 ){
-					// 	$('#hd, #fp-nav').fadeOut();
-					// }else {
-					// 	$('#hd, #fp-nav').fadeIn();
-					// }
-				},
-				verticalCentered:false,
-				//scrollOverflow: true,
-				scrollOverflowOptions: {
-					scrollbars: false,
-					preventDefault: false
-				},
-				keyboardScrolling: true,
-				animateAnchor: true,
-				recordHistory: true,
-				
-			});
+			// FOOTER
+			// if( nextIndex == 6 ){
+			// 	$('#header, #fp-nav').fadeOut();
+			// }else {
+			// 	$('#header, #fp-nav').fadeIn();
+			// }
 		}
-		
-		setFullpage();
-
-		
+	});
 	
+	// mainSlick
+	$('#project-slick1').slick({
+		infinite: true,
+		arrows: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		speed: 30000,
+		autoplaySpeed: 100,
+		vertical: true
+	});
+
+	$('#project-slick2').slick({
+		infinite: true,
+		arrows: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		speed: 30000,
+		autoplaySpeed: 100,
+		vertical: true
+	});
+
+	$('#project-slick3').slick({
+		infinite: true,
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		autoplay: true,
+		speed: 3000,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 1
+				}
+			},
+			{
+				breakpoint: 578,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+		]
+	});
+
+	$('.code-slick').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		speed: 1000,
+		centerMode: true,
+		arrows: false,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 578,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+		]
+	});
 </script>
 <script src="js/thema/portfolio.js"></script>
 
