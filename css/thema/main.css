@@ -23,7 +23,7 @@ i:before{vertical-align:middle;}
 .fp-section{overflow:hidden;display:flex;}
 
 /* fp-nav*/
-#fp-nav.fp-left{left:1.8%;}
+#fp-nav.left{left:1.8%;}
 #fp-nav ul li{width:16px;margin:10px 0;}
 #fp-nav ul li .fp-tooltip{opacity:1;width:auto;left:50% !important;transform:translateX(-50%);font-size:11px;color:#333;top:24px;font-weight:bold;}
 #fp-nav ul li a span{background:#0096dc;width:7px;height:7px;margin:0;transform:translate(-50%, -50%);opacity:0.6;}
@@ -32,13 +32,12 @@ i:before{vertical-align:middle;}
 /**** main ****/
 
 /* intro */
-#section1.fp-section{display:inherit;}
 .intro{display:flex;height:100%;align-items:center;position:relative;}
 .intro::before{position:absolute;content:'';background:url(../../images/ujin.png)no-repeat center center;width:400px;height:100%;right:4%;top:50%;transform:translateY(-50%);background-size:100% auto;opacity:0.3;animation:fadeLeft 1.5s;}
 
 .intro h1{font-size:99px;line-height:0.93;font-weight:normal;color:#222;position:relative;display:inline-block;}
 .lastH1{margin-bottom:33px;}
-.lastH1::before{position:absolute;content:"'3년차'";animation:swing 4s infinite linear;font-size:31px;right:-14px;top:-31px;opacity:0.8;transform:rotate(14deg);}
+/* .lastH1::before{position:absolute;content:"'3년차'";animation:swing 4s infinite linear;font-size:31px;right:-14px;top:-31px;opacity:0.8;transform:rotate(14deg);} */
 .intro p{font-size:18px;font-weight:500;line-height:1.6;color:#222;}
 .blank{margin-bottom:27px;display:block;}
 
@@ -152,7 +151,7 @@ i:before{vertical-align:middle;}
 .skill_list li p{padding:0 35px;line-height:1.6;font-family:'Do Hyeon', sans-serif;font-weight:lighter;text-align:justify;letter-spacing:-0.06em;font-size:23px;}
 
 @media all and (max-width:1300px){
-	#fp-nav.fp-left{left:2.7%;}
+	#fp-nav.left{left:2.7%;}
 
 	header .logo h1{font-size:32px;}
 
@@ -160,7 +159,7 @@ i:before{vertical-align:middle;}
 	.intro::before{width:310px;}
 	.intro h1{font-size:83px;}
 	.lastH1{margin-bottom:26px;}
-	.lastH1::before{font-size:27px;top:-25px;}
+	/* .lastH1::before{font-size:27px;top:-25px;} */
 	.intro p{font-size:16px;}
 	.blank{margin-bottom:17px;}
 
@@ -210,12 +209,11 @@ i:before{vertical-align:middle;}
 
 	.skill_list li div h3{font-size:28px;}
 	.skill_list li p{font-size:19px;padding:0 27px;}
-	
-
 }
 
 @media all and (max-width:767px){
-	.fp-section{height:auto !important;}
+	.fp-section, .fp-tableCell{height:auto !important;}
+	#fp-nav.left{display:none;}
 	
 	header{height:60px;}
 	header.active{background:#fff;border-bottom:1px solid #eee;box-shadow:5px 5px 10px rgb(0 0 0 / 5%);}
@@ -225,7 +223,7 @@ i:before{vertical-align:middle;}
 	.intro::before{width:240px;}
 	.intro h1{font-size:60px;}
 	.lastH1{margin-bottom:22px;}
-	.lastH1::before{font-size:23px;top:-21px;right:-16px;}
+	/* .lastH1::before{font-size:23px;top:-21px;right:-16px;} */
 	.intro p{font-size:15px;}
 	.blank{margin-bottom:14px;}
 
@@ -291,7 +289,7 @@ i:before{vertical-align:middle;}
 	.intro{padding:120px 0 55px;}
 	.intro::before{width:194px;}
 	.intro h1{font-size:45px;}
-	.lastH1::before{font-size:20px;top:-18px;right:-18px;}
+	/* .lastH1::before{font-size:20px;top:-18px;right:-18px;} */
 	.intro p{font-size:14px;}
 	.blank{margin-bottom:12px;}
 
