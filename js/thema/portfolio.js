@@ -186,7 +186,6 @@ ScrollTrigger.matchMedia({
 				trigger:".skill-title h2",
 				start: "top center",//시작 지점
 				end: "1000% 30%",//끝 지점
-				markers: true,
 				scrub: 1
 			},
 			opacity:0,
