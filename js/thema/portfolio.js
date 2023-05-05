@@ -241,9 +241,10 @@ ScrollTrigger.matchMedia({
 		gsap.from(".skill-title h2", {
 			scrollTrigger: {
 				trigger:".skill-title h2",
-				start: "",//시작 지점
-				end: "1000% 900%",//끝 지점
-				scrub: 3
+				start: "0% 45%",//시작 지점
+    			end: "100% 80%",//끝 지점
+				markers: true,
+				scrub: 1
 			},
 			opacity:0,
 			y: -100
