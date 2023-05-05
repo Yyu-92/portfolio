@@ -180,6 +180,56 @@ ScrollTrigger.matchMedia({
 			x: 50
 		});
   	},
+	"(max-width: 550px)": function() {
+		gsap.from(".skill-title h2", {
+			scrollTrigger: {
+				trigger:".skill-title h2",
+				start: "top center",//시작 지점
+				end: "1000% 30%",//끝 지점
+				markers: true,
+				scrub: 1
+			},
+			opacity:0,
+			y: -100
+		});
+		gsap.from(".portfolio-wrap li:nth-of-type(1)", {
+			scrollTrigger: {
+				trigger:".portfolio-wrap li:nth-of-type(1)",
+				scrub: 1
+			},
+			opacity:0.5,
+			x: 0,
+			y: 150
+		});
+		gsap.from(".portfolio-wrap li:nth-of-type(2) ", {
+			scrollTrigger: {
+				trigger:".portfolio-wrap li:nth-of-type(2)",
+				scrub: 1
+			},
+			opacity:0.5,
+			x: 0,
+			y: 150
+		});
+		gsap.from(".portfolio-wrap li:nth-of-type(3) ", {
+			scrollTrigger: {
+				trigger:".portfolio-wrap li:nth-of-type(3)",
+				scrub: 1
+			},
+			opacity:0.5,
+			x: 0,
+			y: 150
+		});
+		gsap.from(".portfolio-wrap li:nth-of-type(4) ", {
+			scrollTrigger: {
+				trigger:".portfolio-wrap li:nth-of-type(4)",
+				scrub: 1
+			},
+			opacity:0.5,
+			x: 0,
+			y: 150
+		});
+	},
+		
 	"(max-width: 767px)": function() {
 		gsap.from(".lastH1", {
 			scrollTrigger: {
@@ -234,54 +284,7 @@ ScrollTrigger.matchMedia({
 			duration:1,
 			y: 80
 		});
-		
-  	},
-	  
-	"(max-width: 550px)": function() {
-		gsap.from(".skill-title h2", {
-			scrollTrigger: {
-				trigger:".skill-title h2",
-				start: "0% 45%",//시작 지점
-    			end: "100% 80%",//끝 지점
-				markers: true,
-				scrub: 1
-			},
-			opacity:0,
-			y: -100
-		});
-		gsap.from(".portfolio-wrap li:nth-of-type(1)", {
-			scrollTrigger: {
-				trigger:".portfolio-wrap li:nth-of-type(1)",
-				scrub: 1
-			},
-			opacity:0.5,
-			y: 150
-		});
-		gsap.from(".portfolio-wrap li:nth-of-type(2) ", {
-			scrollTrigger: {
-				trigger:".portfolio-wrap li:nth-of-type(2)",
-				scrub: 1
-			},
-			opacity:0.5,
-			y: 150
-		});
-		gsap.from(".portfolio-wrap li:nth-of-type(3) ", {
-			scrollTrigger: {
-				trigger:".portfolio-wrap li:nth-of-type(3)",
-				scrub: 1
-			},
-			opacity:0.5,
-			y: 150
-		});
-		gsap.from(".portfolio-wrap li:nth-of-type(4) ", {
-			scrollTrigger: {
-				trigger:".portfolio-wrap li:nth-of-type(4)",
-				scrub: 1
-			},
-			opacity:0.5,
-			y: 150
-		});
-		
+	
   	}
 
 });
